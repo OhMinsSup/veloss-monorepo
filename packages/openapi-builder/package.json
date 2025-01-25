@@ -1,6 +1,6 @@
 {
   "name": "@veloss/openapi-builder",
-  "description": "OpenAPI builder utilities",
+  "description": "This is a library built on @veloss/openapi-ofetch that is Supabase SDK friendly.",
   "author": {
     "name": "OhMinsSup",
     "email": "mins5190@gmail.com"

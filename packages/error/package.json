@@ -1,6 +1,6 @@
 {
   "name": "@veloss/error",
-  "description": "Error handling utilities",
+  "description": "Handle errors in a simple and easily scalable way.",
   "author": {
     "name": "OhMinsSup",
     "email": "mins5190@gmail.com"

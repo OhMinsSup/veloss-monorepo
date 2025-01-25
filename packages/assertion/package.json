@@ -1,6 +1,6 @@
 {
   "name": "@veloss/assertion",
-  "description": "Assertion utilities",
+  "description": "Simple assertion library with no dependencies",
   "author": {
     "name": "OhMinsSup",
     "email": "mins5190@gmail.com"

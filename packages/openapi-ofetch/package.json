@@ -1,6 +1,6 @@
 {
   "name": "@veloss/openapi-ofetch",
-  "description": "OpenAPI fetch utilities",
+  "description": "openapi-fetch extension library (ofetch style)",
   "author": {
     "name": "OhMinsSup",
     "email": "mins5190@gmail.com"
