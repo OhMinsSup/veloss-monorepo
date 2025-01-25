@@ -1,0 +1,41 @@
+{
+  "name": "veloss-monorepo",
+  "version": "0.0.1-beta.0",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "error",
+    "custom",
+    "generator"
+  ],
+  "license": "ISC",
+  "author": {
+    "name": "OhMinsSup",
+    "email": "mins5190@gmail.com"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo run clean",
+    "dev": "turbo watch dev --continue",
+    "format": "turbo run format",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "prettier": "catalog:",
+    "turbo": "^2.3.4",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@9.7.0",
+  "engines": {
+    "bun": ">=1.0",
+    "node": ">=20.16.0"
+  }
+}

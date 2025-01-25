@@ -1,0 +1,60 @@
+{
+  "name": "@veloss/openapi-builder",
+  "description": "OpenAPI builder utilities",
+  "author": {
+    "name": "OhMinsSup",
+    "email": "mins5190@gmail.com"
+  },
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsup --watch",
+    "format": "biome format . --write",
+    "lint": "biome check .",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@veloss/openapi-ofetch": "workspace:*"
+  },
+  "peerDependencies": {
+    "openapi-fetch": "^0.13.4",
+    "openapi-typescript-helpers": "^0.0.15"
+  },
+  "devDependencies": {
+    "h3": "^1.14.0",
+    "listhen": "^1.9.0",
+    "ufo": "^1.5.4",
+    "vite": "catalog:vitejs",
+    "vite-tsconfig-paths": "catalog:vitejs",
+    "jsdom": "catalog:vitejs",
+    "vitest": "catalog:vitejs",
+    "@veloss/tsconfig": "workspace:*",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  }
+}
