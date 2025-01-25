@@ -31,11 +31,11 @@
   "scripts": {
     "build": "tsup",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "coverage": "vitest run --coverage",
     "dev": "tsup --watch",
     "format": "biome format . --write",
     "lint": "biome check .",
-    "test": "vitest",
-    "test:run": "vitest run",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
