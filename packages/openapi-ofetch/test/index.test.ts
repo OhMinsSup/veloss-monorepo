@@ -3,7 +3,7 @@ import { getQuery, joinURL } from "ufo";
 import { createApp, createError, eventHandler, readBody, readRawBody, toNodeListener } from "h3";
 import { describe, beforeEach, beforeAll, afterAll, it, expect, vi } from "vitest";
 import { createOpenApiFetch } from "../src";
-import type { FetchError } from "../src/error";
+import { FetchError } from "../src/error";
 
 describe("openapi-ofetch", () => {
   let listener: Listener;
@@ -212,6 +212,8 @@ describe("openapi-ofetch", () => {
       path: "/404",
     }).catch((_error) => _error);
 
+    expect(error).to.be.instanceOf(FetchError);
+
     const { data, statusMessage, statusCode } = error.toJSON();
 
     expect(statusMessage).to.contain("Cannot find any path matching /404.");
@@ -235,7 +237,9 @@ describe("openapi-ofetch", () => {
       path: "/403",
     }).catch((_error) => _error);
 
-    const { data, statusMessage, statusCode } = error.toJSON();
+    expect(error).to.be.instanceOf(FetchError);
+
+    const { statusMessage, statusCode } = error.toJSON();
 
     expect(statusMessage).to.contain("Forbidden");
     expect(statusCode).to.equal(403);
@@ -268,6 +272,8 @@ describe("openapi-ofetch", () => {
         retry: 2,
       },
     ).catch((_error) => _error);
+
+    expect(error).to.be.instanceOf(FetchError);
 
     const { data } = error.toJSON();
 
@@ -346,6 +352,8 @@ describe("openapi-ofetch", () => {
       method: "post",
       path: "/403",
     }).catch((_error) => _error);
+
+    expect(error).to.be.instanceOf(FetchError);
 
     const { data, statusMessage, statusCode } = error.toJSON();
 

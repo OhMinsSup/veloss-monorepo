@@ -243,6 +243,19 @@ export class OpenApiOption<
   }
 
   /**
+   * @description API 요청이 실패했을 때 에러를 던질지 여부를 설정합니다.
+   * @param {boolean} shouldThrowOnError
+   * @returns {this}
+   */
+  setShouldThrowOnError(shouldThrowOnError: boolean): this {
+    this.options = {
+      ...(this.options ?? {}),
+      shouldThrowOnError,
+    } as unknown as FetchClientOptions<Paths, Method, Path, Init, Media>;
+    return this;
+  }
+
+  /**
    * @description API 요청이 실패했을 때 사용할 signal을 설정합니다.
    * @param {AbortSignal} signal
    * @returns {this}
