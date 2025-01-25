@@ -68,8 +68,6 @@ export class OpenApiBuilder<
         method: this.method,
       },
       this.options,
-    )
-      .then(onfulfilled, onrejected)
-      .catch(onrejected);
+    ).then(onfulfilled, onrejected);
   }
 }
