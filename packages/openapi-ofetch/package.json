@@ -25,6 +25,26 @@
       }
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OhMinsSup/veloss-monorepo",
+    "directory": "packages/openapi-ofetch"
+  },
+  "bugs": {
+    "url": "https://github.com/OhMinsSup/veloss-monorepo/issues"
+  },
+  "keywords": [
+    "openapi",
+    "openapi-fetch",
+    "openapi-client",
+    "javascript",
+    "typescript",
+    "rest",
+    "api",
+    "oapi_3",
+    "oapi_3_1",
+    "fetch"
+  ],
   "files": [
     "dist"
   ],

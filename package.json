@@ -4,9 +4,11 @@
   "private": true,
   "type": "module",
   "keywords": [
-    "error",
-    "custom",
-    "generator"
+    "monorepo",
+    "typescript",
+    "javascript",
+    "utilities",
+    "tools"
   ],
   "license": "MIT",
   "author": {

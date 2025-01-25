@@ -45,6 +45,22 @@
       }
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OhMinsSup/veloss-monorepo",
+    "directory": "packages/error"
+  },
+  "bugs": {
+    "url": "https://github.com/OhMinsSup/veloss-monorepo/issues"
+  },
+  "keywords": [
+    "error-handling",
+    "error-handler",
+    "error",
+    "javascript",
+    "typescript",
+    "exceptions"
+  ],
   "files": [
     "dist"
   ],
