@@ -1,0 +1,1 @@
+# @veloss/openapi-ofetch
