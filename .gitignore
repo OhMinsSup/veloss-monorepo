@@ -60,3 +60,6 @@ dist/
 *.sqlite
 *.db
 *.db-journal
+
+# rspress
+docs_build/

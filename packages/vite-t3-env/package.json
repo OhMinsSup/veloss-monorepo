@@ -1,6 +1,6 @@
 {
-  "name": "@veloss/error",
-  "description": "Handle errors in a simple and easily scalable way.",
+  "name": "@veloss/vite-t3-env",
+  "description": "vite-t3-env plugin for vite",
   "author": {
     "name": "OhMinsSup",
     "email": "mins5190@gmail.com"
@@ -22,43 +22,23 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
-    },
-    "./http": {
-      "import": {
-        "types": "./dist/http.d.ts",
-        "default": "./dist/http.js"
-      },
-      "require": {
-        "types": "./dist/http.d.cts",
-        "default": "./dist/http.cjs"
-      }
-    },
-    "./auth": {
-      "import": {
-        "types": "./dist/auth.d.ts",
-        "default": "./dist/auth.js"
-      },
-      "require": {
-        "types": "./dist/auth.d.cts",
-        "default": "./dist/auth.cjs"
-      }
     }
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/OhMinsSup/veloss-monorepo",
-    "directory": "packages/error"
+    "directory": "packages/vite-t3-env"
   },
   "bugs": {
     "url": "https://github.com/OhMinsSup/veloss-monorepo/issues"
   },
   "keywords": [
-    "error-handling",
-    "error-handler",
-    "error",
+    "vite",
+    "t3",
+    "t3-stack",
+    "t3-env",
     "javascript",
-    "typescript",
-    "exceptions"
+    "typescript"
   ],
   "files": [
     "dist"
@@ -66,19 +46,30 @@
   "scripts": {
     "build": "tsup",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
-    "coverage": "vitest run --coverage",
     "dev": "tsup --watch",
     "format": "biome format . --write",
     "lint": "biome check .",
-    "test": "vitest run",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
+  "dependencies": {
+    "es-module-lexer": "^1.6.0",
+    "find-up": "^7.0.0"
+  },
   "devDependencies": {
-    "vite": "catalog:vitejs",
     "vite-tsconfig-paths": "catalog:vitejs",
-    "vitest": "catalog:vitejs",
     "@veloss/tsconfig": "workspace:*",
     "tsup": "catalog:",
     "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0 || ^6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    },
+    "vite": {
+      "optional": true
+    }
   }
 }

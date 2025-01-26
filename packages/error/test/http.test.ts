@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
-import { HttpError, createHttpError, isHttpError } from "./index";
-import { isBaseError } from "../base";
+import { HttpError, createHttpError, isHttpError } from "../src/http";
+import { isBaseError } from "../src/base";
 
 test("HttpError", () => {
   const error = new HttpError("error message");

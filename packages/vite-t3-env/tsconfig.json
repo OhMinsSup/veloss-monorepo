@@ -1,8 +1,8 @@
 {
-  "extends": "@veloss/tsconfig/internal-package.json",
+  "extends": "@veloss/tsconfig/vite.json",
   "compilerOptions": {
     "lib": ["ES2022", "dom", "dom.iterable"]
   },
-  "include": ["src", "test/index.test.ts"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }
