@@ -6,7 +6,6 @@
     "email": "mins5190@gmail.com"
   },
   "version": "0.0.2",
-  "private": true,
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
