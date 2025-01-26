@@ -1,7 +1,7 @@
 {
   "name": "veloss-monorepo",
-  "version": "0.0.1-beta.0",
   "private": true,
+  "version": "0.0.0",
   "type": "module",
   "keywords": [
     "monorepo",
@@ -16,9 +16,9 @@
     "email": "mins5190@gmail.com"
   },
   "workspaces": [
-    "apps/*",
-    "packages/*",
-    "tooling/*"
+    "apps/**",
+    "packages/**",
+    "tooling/**"
   ],
   "scripts": {
     "build": "turbo build",
@@ -28,10 +28,13 @@
     "format": "turbo run format",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "version": "pnpm run build && changeset version && pnpm install"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.12",
     "prettier": "catalog:",
     "turbo": "^2.3.4",
     "typescript": "catalog:"
