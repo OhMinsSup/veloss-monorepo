@@ -3,6 +3,6 @@
   "compilerOptions": {
     "lib": ["ES2022", "dom", "dom.iterable"]
   },
-  "include": ["src"],
+  "include": ["src", "test/index.test.ts"],
   "exclude": ["node_modules"]
 }

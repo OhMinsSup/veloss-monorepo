@@ -19,7 +19,7 @@ import {
   isPromiseLike,
   isString,
   isTrusted,
-} from "./index";
+} from "../src/index";
 
 test("isArray", () => {
   expect(isArray([])).toBe(true);
