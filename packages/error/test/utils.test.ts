@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { pick, omit } from "./utils";
+import { pick, omit } from "../src/core/utils";
 
 test("pick", () => {
   const obj = { a: 1, b: 2, c: 3 };

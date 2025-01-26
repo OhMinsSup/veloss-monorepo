@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
-import { AuthError, isAuthError, createAuthError } from "./index";
-import { isBaseError } from "../base";
+import { AuthError, isAuthError, createAuthError } from "../src/auth";
+import { isBaseError } from "../src/base";
 
 test("AuthError", () => {
   const error = new AuthError("error message");

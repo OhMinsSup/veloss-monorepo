@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { BaseError, createBaseError, isBaseError } from "./index";
+import { BaseError, createBaseError, isBaseError } from "../src/base";
 
 test("BaseError", () => {
   const error = new BaseError("error message");
