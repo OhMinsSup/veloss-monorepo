@@ -15,9 +15,9 @@
     "email": "mins5190@gmail.com"
   },
   "workspaces": [
-    "apps/**",
-    "packages/**",
-    "tooling/**"
+    "apps/*",
+    "packages/*",
+    "tooling/*"
   ],
   "scripts": {
     "build": "turbo build",
