@@ -1,0 +1,76 @@
+{
+  "name": "@veloss/vite-t3-env",
+  "description": "vite-t3-env plugin for vite",
+  "author": {
+    "name": "OhMinsSup",
+    "email": "mins5190@gmail.com"
+  },
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OhMinsSup/veloss-monorepo",
+    "directory": "packages/vite-t3-env"
+  },
+  "bugs": {
+    "url": "https://github.com/OhMinsSup/veloss-monorepo/issues"
+  },
+  "keywords": [
+    "vite",
+    "t3",
+    "t3-stack",
+    "t3-env",
+    "javascript",
+    "typescript"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsup --watch",
+    "format": "biome format . --write",
+    "lint": "biome check .",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "es-module-lexer": "^1.6.0",
+    "find-up": "^7.0.0"
+  },
+  "devDependencies": {
+    "vite-tsconfig-paths": "catalog:vitejs",
+    "@veloss/tsconfig": "workspace:*",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0 || ^6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    },
+    "vite": {
+      "optional": true
+    }
+  }
+}
