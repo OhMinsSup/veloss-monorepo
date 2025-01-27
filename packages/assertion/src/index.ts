@@ -1,8 +1,10 @@
+import type { Dict, AnyFunction, Primitive, PrimitiveObject } from "./types";
+
 export function isNumber(value: any): value is number {
   return typeof value === "number";
 }
 
-export function isNotNumber(value: any) {
+export function isNotNumber(value: any): boolean {
   if (!isNumber(value)) {
     return true;
   }
@@ -14,7 +16,7 @@ export function isNotNumber(value: any) {
   return !Number.isFinite(value);
 }
 
-export function isNumeric(value: any) {
+export function isNumeric(value: any): boolean {
   return value != null && value - Number.parseFloat(value) + 1 >= 0;
 }
 
@@ -22,17 +24,15 @@ export function isArray<T>(value: any): value is T[] {
   return Array.isArray(value);
 }
 
-export function isEmptyArray(value: any) {
+export function isEmptyArray(value: any): boolean {
   return isArray(value) && value.length === 0;
 }
-
-type AnyFunction = (...args: any[]) => any;
 
 export function isFunction<T extends AnyFunction = AnyFunction>(value: any): value is T {
   return typeof value === "function";
 }
 
-export function isDefined(value: any) {
+export function isDefined(value: any): boolean {
   return typeof value !== "undefined" && value !== undefined;
 }
 
@@ -40,14 +40,12 @@ export function isUndefined(value: any): value is undefined {
   return typeof value === "undefined" || value === undefined;
 }
 
-export type Dict<T = any> = Record<string, T>;
-
 export function isObject(value: any): value is Dict {
   const type = typeof value;
   return value != null && (type === "object" || type === "function") && !isArray(value);
 }
 
-export function isEmptyObject(value: any) {
+export function isEmptyObject(value: any): boolean {
   return isObject(value) && Object.keys(value).length === 0;
 }
 
@@ -93,7 +91,7 @@ export function canUseDOM(): boolean {
   return Boolean(typeof window !== "undefined" && window.document && window.document.createElement);
 }
 
-export const isBrowser = () => canUseDOM();
+export const isBrowser = (): boolean => canUseDOM();
 
 export const isTrusted = (value: unknown): value is true => isBoolean(value) && value;
 
@@ -102,3 +100,9 @@ export const isFalsy = (value: unknown): value is false =>
 
 export const isPromiseLike = <T = any>(value: unknown): value is PromiseLike<T> =>
   isObject(value) && isFunction((value as PromiseLike<T>).then);
+
+export function isPrimitive(value: any): value is Primitive {
+  return isNull(value) || ["string", "number", "boolean"].includes(typeof value) || isUndefined(value);
+}
+
+export type { Dict, AnyFunction, Primitive, PrimitiveObject };
