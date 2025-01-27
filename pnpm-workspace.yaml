@@ -8,6 +8,7 @@ catalog:
   tsup: ^8.2.4
   prettier: ^3.4.2
   "@biomejs/biome": ^1.9.4
+  typedoc: "^0.27.6"
 
 catalogs:
   vitejs:

@@ -1,0 +1,1961 @@
+{
+	"id": 0,
+	"name": "@veloss/assertion",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 70,
+			"name": "AnyFunction",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "types.ts",
+					"line": 1,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 71,
+					"name": "__type",
+					"variant": "declaration",
+					"kind": 65536,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 1,
+							"character": 26
+						}
+					],
+					"signatures": [
+						{
+							"id": 72,
+							"name": "__type",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"parameters": [
+								{
+									"id": 73,
+									"name": "args",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isRest": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "any"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 68,
+			"name": "Dict",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "types.ts",
+					"line": 3,
+					"character": 12
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 69,
+					"name": "T",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"default": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.es5.d.ts",
+					"qualifiedName": "Record"
+				},
+				"typeArguments": [
+					{
+						"type": "intrinsic",
+						"name": "string"
+					},
+					{
+						"type": "reference",
+						"target": 69,
+						"name": "T",
+						"package": "@veloss/assertion",
+						"refersToTypeParameter": true
+					}
+				],
+				"name": "Record",
+				"package": "typescript"
+			}
+		},
+		{
+			"id": 74,
+			"name": "Primitive",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "types.ts",
+					"line": 5,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "intrinsic",
+						"name": "string"
+					},
+					{
+						"type": "intrinsic",
+						"name": "number"
+					},
+					{
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					{
+						"type": "literal",
+						"value": null
+					},
+					{
+						"type": "intrinsic",
+						"name": "undefined"
+					}
+				]
+			}
+		},
+		{
+			"id": 75,
+			"name": "PrimitiveObject",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "types.ts",
+					"line": 7,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": 68,
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": 74,
+						"name": "Primitive",
+						"package": "@veloss/assertion"
+					}
+				],
+				"name": "Dict",
+				"package": "@veloss/assertion"
+			}
+		},
+		{
+			"id": 48,
+			"name": "canUseDOM",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 90,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L90"
+				}
+			],
+			"signatures": [
+				{
+					"id": 49,
+					"name": "canUseDOM",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 90,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L90"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			]
+		},
+		{
+			"id": 10,
+			"name": "isArray",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 23,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L23"
+				}
+			],
+			"signatures": [
+				{
+					"id": 11,
+					"name": "isArray",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 23,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L23"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 12,
+							"name": "T",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {}
+						}
+					],
+					"parameters": [
+						{
+							"id": 13,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "array",
+							"elementType": {
+								"type": "reference",
+								"target": 12,
+								"name": "T",
+								"package": "@veloss/assertion",
+								"refersToTypeParameter": true
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 42,
+			"name": "isBoolean",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 64,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L64"
+				}
+			],
+			"signatures": [
+				{
+					"id": 43,
+					"name": "isBoolean",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 64,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L64"
+						}
+					],
+					"parameters": [
+						{
+							"id": 44,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "intrinsic",
+							"name": "boolean"
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 56,
+			"name": "isBrowser",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 94,
+					"character": 13,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L94"
+				}
+			],
+			"signatures": [
+				{
+					"id": 57,
+					"name": "isBrowser",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 94,
+							"character": 25,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L94"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			]
+		},
+		{
+			"id": 21,
+			"name": "isDefined",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 35,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L35"
+				}
+			],
+			"signatures": [
+				{
+					"id": 22,
+					"name": "isDefined",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 35,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L35"
+						}
+					],
+					"parameters": [
+						{
+							"id": 23,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			]
+		},
+		{
+			"id": 45,
+			"name": "isEmpty",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 68,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L68"
+				}
+			],
+			"signatures": [
+				{
+					"id": 46,
+					"name": "isEmpty",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 68,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L68"
+						}
+					],
+					"parameters": [
+						{
+							"id": 47,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			]
+		},
+		{
+			"id": 14,
+			"name": "isEmptyArray",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 27,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L27"
+				}
+			],
+			"signatures": [
+				{
+					"id": 15,
+					"name": "isEmptyArray",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 27,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L27"
+						}
+					],
+					"parameters": [
+						{
+							"id": 16,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			]
+		},
+		{
+			"id": 30,
+			"name": "isEmptyObject",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 48,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L48"
+				}
+			],
+			"signatures": [
+				{
+					"id": 31,
+					"name": "isEmptyObject",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 48,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L48"
+						}
+					],
+					"parameters": [
+						{
+							"id": 32,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			]
+		},
+		{
+			"id": 61,
+			"name": "isFalsy",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 98,
+					"character": 13,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L98"
+				}
+			],
+			"signatures": [
+				{
+					"id": 62,
+					"name": "isFalsy",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 98,
+							"character": 23,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L98"
+						}
+					],
+					"parameters": [
+						{
+							"id": 63,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "literal",
+							"value": false
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 17,
+			"name": "isFunction",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 31,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L31"
+				}
+			],
+			"signatures": [
+				{
+					"id": 18,
+					"name": "isFunction",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 31,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L31"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 19,
+							"name": "T",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 70,
+								"name": "AnyFunction",
+								"package": "@veloss/assertion"
+							},
+							"default": {
+								"type": "reference",
+								"target": 70,
+								"name": "AnyFunction",
+								"package": "@veloss/assertion"
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 20,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "reference",
+							"target": 19,
+							"name": "T",
+							"package": "@veloss/assertion",
+							"refersToTypeParameter": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 33,
+			"name": "isNotEmptyObject",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 52,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L52"
+				}
+			],
+			"signatures": [
+				{
+					"id": 34,
+					"name": "isNotEmptyObject",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 52,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L52"
+						}
+					],
+					"parameters": [
+						{
+							"id": 35,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "intrinsic",
+							"name": "object"
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 4,
+			"name": "isNotNumber",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 7,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L7"
+				}
+			],
+			"signatures": [
+				{
+					"id": 5,
+					"name": "isNotNumber",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 7,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L7"
+						}
+					],
+					"parameters": [
+						{
+							"id": 6,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			]
+		},
+		{
+			"id": 36,
+			"name": "isNull",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 56,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L56"
+				}
+			],
+			"signatures": [
+				{
+					"id": 37,
+					"name": "isNull",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 56,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L56"
+						}
+					],
+					"parameters": [
+						{
+							"id": 38,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "literal",
+							"value": null
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 53,
+			"name": "isNullOrUndefined",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 88,
+					"character": 13,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L88"
+				}
+			],
+			"signatures": [
+				{
+					"id": 54,
+					"name": "isNullOrUndefined",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 88,
+							"character": 33,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L88"
+						}
+					],
+					"parameters": [
+						{
+							"id": 55,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "union",
+							"types": [
+								{
+									"type": "intrinsic",
+									"name": "undefined"
+								},
+								{
+									"type": "literal",
+									"value": null
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "isNumber",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 3,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L3"
+				}
+			],
+			"signatures": [
+				{
+					"id": 2,
+					"name": "isNumber",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 3,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L3"
+						}
+					],
+					"parameters": [
+						{
+							"id": 3,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "intrinsic",
+							"name": "number"
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 7,
+			"name": "isNumeric",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 19,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L19"
+				}
+			],
+			"signatures": [
+				{
+					"id": 8,
+					"name": "isNumeric",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 19,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L19"
+						}
+					],
+					"parameters": [
+						{
+							"id": 9,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			]
+		},
+		{
+			"id": 27,
+			"name": "isObject",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 43,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L43"
+				}
+			],
+			"signatures": [
+				{
+					"id": 28,
+					"name": "isObject",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 43,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L43"
+						}
+					],
+					"parameters": [
+						{
+							"id": 29,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "reference",
+							"target": 68,
+							"name": "Dict",
+							"package": "@veloss/assertion"
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 50,
+			"name": "isPrimitive",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 104,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L104"
+				}
+			],
+			"signatures": [
+				{
+					"id": 51,
+					"name": "isPrimitive",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 104,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L104"
+						}
+					],
+					"parameters": [
+						{
+							"id": 52,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "reference",
+							"target": 74,
+							"name": "Primitive",
+							"package": "@veloss/assertion"
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 64,
+			"name": "isPromiseLike",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 101,
+					"character": 13,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L101"
+				}
+			],
+			"signatures": [
+				{
+					"id": 65,
+					"name": "isPromiseLike",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 101,
+							"character": 29,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L101"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 66,
+							"name": "T",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"default": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 67,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "reference",
+							"target": {
+								"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.es5.d.ts",
+								"qualifiedName": "PromiseLike"
+							},
+							"typeArguments": [
+								{
+									"type": "reference",
+									"target": 66,
+									"name": "T",
+									"package": "@veloss/assertion",
+									"refersToTypeParameter": true
+								}
+							],
+							"name": "PromiseLike",
+							"package": "typescript"
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 39,
+			"name": "isString",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 60,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L60"
+				}
+			],
+			"signatures": [
+				{
+					"id": 40,
+					"name": "isString",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 60,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L60"
+						}
+					],
+					"parameters": [
+						{
+							"id": 41,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 58,
+			"name": "isTrusted",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 96,
+					"character": 13,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L96"
+				}
+			],
+			"signatures": [
+				{
+					"id": 59,
+					"name": "isTrusted",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 96,
+							"character": 25,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L96"
+						}
+					],
+					"parameters": [
+						{
+							"id": 60,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "literal",
+							"value": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 24,
+			"name": "isUndefined",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 39,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L39"
+				}
+			],
+			"signatures": [
+				{
+					"id": 25,
+					"name": "isUndefined",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 39,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/4b277161bcd3ed4c52fc6eee7363577e987ebd50/packages/assertion/src/index.ts#L39"
+						}
+					],
+					"parameters": [
+						{
+							"id": 26,
+							"name": "value",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "intrinsic",
+							"name": "undefined"
+						}
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Type Aliases",
+			"children": [
+				70,
+				68,
+				74,
+				75
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				48,
+				10,
+				42,
+				56,
+				21,
+				45,
+				14,
+				30,
+				61,
+				17,
+				33,
+				4,
+				36,
+				53,
+				1,
+				7,
+				27,
+				50,
+				64,
+				39,
+				58,
+				24
+			]
+		}
+	],
+	"packageName": "@veloss/assertion",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "# @veloss/assertion\n\n[![npm version][npm-version-src]][npm-version-href]\n[![npm downloads][npm-downloads-src]][npm-downloads-href]\n[![bundle][bundle-src]][bundle-href]\n[![License][license-src]][license-href]\n\n데이터에 대한 타입을 검증하고 검증된 데이터를 안전한 타입으로 변환하는 라이브러리입니다.\n\n## 🚀 Quick Start\n\nInstall:\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\n# npm\nnpm install @veloss/assertion\n\n# yarn\nyarn add @veloss/assertion\n\n# pnpm\npnpm add @veloss/assertion\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\nImport:\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\n// ESM / Typescript\nimport { isNumber } from \"@veloss/assertion\";\n\n// CommonJS\nconst { isNumber } = require(\"@veloss/assertion\");\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## 📚 Documentation\n\n### isNumber\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isNumber } from \"@veloss/assertion\";\n\nisNumber(1); // true\n\nisNumber(\"1\"); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isNotNumber\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isNotNumber } from \"@veloss/assertion\";\n\nisNotNumber(1); // false\n\nisNotNumber(\"1\"); // true\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isNumeric\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isNumeric } from \"@veloss/assertion\";\n\nisNumeric(1); // true\n\nisNumeric(\"1\"); // true\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isArray\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isArray } from \"@veloss/assertion\";\n\nisArray([]); // true\n\nisArray({}); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isEmptyArray\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isEmptyArray } from \"@veloss/assertion\";\n\nisEmptyArray([]); // true\n\nisEmptyArray([1]); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isFunction\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isFunction } from \"@veloss/assertion\";\n\nisFunction(() => {}); // true\n\nisFunction({}); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isDefined\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isDefined } from \"@veloss/assertion\";\n\nisDefined(1); // true\n\nisDefined(null); // true\n\nisDefined(undefined); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isUndefined\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isUndefined } from \"@veloss/assertion\";\n\nisUndefined(1); // false\n\nisUndefined(null); // false\n\nisUndefined(undefined); // true\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isObject\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isObject } from \"@veloss/assertion\";\n\nisObject({}); // true\n\nisObject([]); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isEmptyObject\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isEmptyObject } from \"@veloss/assertion\";\n\nisEmptyObject({}); // true\n\nisEmptyObject({ a: 1 }); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isNotEmptyObject\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isNotEmptyObject } from \"@veloss/assertion\";\n\nisNotEmptyObject({}); // false\n\nisNotEmptyObject({ a: 1 }); // true\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isNull\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isNull } from \"@veloss/assertion\";\n\nisNull(null); // true\n\nisNull(undefined); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isString\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isString } from \"@veloss/assertion\";\n\nisString(\"1\"); // true\n\nisString(1); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isBoolean\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isBoolean } from \"@veloss/assertion\";\n\nisBoolean(true); // true\n\nisBoolean(1); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isEmpty\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isEmpty } from \"@veloss/assertion\";\n\nisEmpty(\"\"); // true\n\nisEmpty([]); // true\n\nisEmpty({}); // true\n\nisEmpty(null); // true\n\nisEmpty(undefined); // true\n\nisEmpty(0); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isNullOrUndefined\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isNullOrUndefined } from \"@veloss/assertion\";\n\nisNullOrUndefined(null); // true\n\nisNullOrUndefined(undefined); // true\n\nisNullOrUndefined(0); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### canUseDOM\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { canUseDOM } from \"@veloss/assertion\";\n\n// Node.js\ncanUseDOM(); // false\n\n// Browser\ncanUseDOM(); // true\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isBrowser\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isBrowser } from \"@veloss/assertion\";\n\n// Node.js\nisBrowser(); // false\n\n// Browser\nisBrowser(); // true\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isTrusted\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isTrusted } from \"@veloss/assertion\";\n\nisTrusted(true); // true\n\nisTrusted(false); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isFalsy\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isFalsy } from \"@veloss/assertion\";\n\nisFalsy(false); // true\n\nisFalsy(0); // true\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### isPromiseLike\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { isPromiseLike } from \"@veloss/assertion\";\n\nisPromiseLike(Promise.resolve()); // true\n\nisPromiseLike({ then: () => {} }); // true\n\nisPromiseLike({}); // false\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### Primitive\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\nimport { Primitive } from \"@veloss/assertion\";\n\nconst a: Primitive = 1;\n\nconst b: Primitive = \"1\";\n\nconst c: Primitive = true;\n\nconst d: Primitive = null;\n\nconst e: Primitive = undefined;\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## License\n\n[MIT]("
+		},
+		{
+			"kind": "relative-link",
+			"text": "./LICENSE",
+			"target": 2
+		},
+		{
+			"kind": "text",
+			"text": ")\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```\n\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```\n\n```"
+		}
+	],
+	"symbolIdMap": {
+		"0": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNumber"
+		},
+		"2": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNumber"
+		},
+		"3": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"4": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNotNumber"
+		},
+		"5": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNotNumber"
+		},
+		"6": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"7": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNumeric"
+		},
+		"8": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNumeric"
+		},
+		"9": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"10": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isArray"
+		},
+		"11": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isArray"
+		},
+		"12": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "T"
+		},
+		"13": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"14": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isEmptyArray"
+		},
+		"15": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isEmptyArray"
+		},
+		"16": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"17": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isFunction"
+		},
+		"18": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isFunction"
+		},
+		"19": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "T"
+		},
+		"20": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"21": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isDefined"
+		},
+		"22": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isDefined"
+		},
+		"23": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"24": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isUndefined"
+		},
+		"25": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isUndefined"
+		},
+		"26": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"27": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isObject"
+		},
+		"28": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isObject"
+		},
+		"29": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"30": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isEmptyObject"
+		},
+		"31": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isEmptyObject"
+		},
+		"32": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"33": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNotEmptyObject"
+		},
+		"34": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNotEmptyObject"
+		},
+		"35": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"36": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNull"
+		},
+		"37": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNull"
+		},
+		"38": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"39": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isString"
+		},
+		"40": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isString"
+		},
+		"41": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"42": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isBoolean"
+		},
+		"43": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isBoolean"
+		},
+		"44": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"45": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isEmpty"
+		},
+		"46": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isEmpty"
+		},
+		"47": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"48": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "canUseDOM"
+		},
+		"49": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "canUseDOM"
+		},
+		"50": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isPrimitive"
+		},
+		"51": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isPrimitive"
+		},
+		"52": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"53": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNullOrUndefined"
+		},
+		"54": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isNullOrUndefined"
+		},
+		"55": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"56": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isBrowser"
+		},
+		"57": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isBrowser"
+		},
+		"58": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isTrusted"
+		},
+		"59": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isTrusted"
+		},
+		"60": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"61": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isFalsy"
+		},
+		"62": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isFalsy"
+		},
+		"63": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"64": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isPromiseLike"
+		},
+		"65": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "isPromiseLike"
+		},
+		"66": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "T"
+		},
+		"67": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": "value"
+		},
+		"68": {
+			"sourceFileName": "src/types.ts",
+			"qualifiedName": "Dict"
+		},
+		"69": {
+			"sourceFileName": "src/types.ts",
+			"qualifiedName": "T"
+		},
+		"70": {
+			"sourceFileName": "src/types.ts",
+			"qualifiedName": "AnyFunction"
+		},
+		"71": {
+			"sourceFileName": "src/types.ts",
+			"qualifiedName": "__type"
+		},
+		"72": {
+			"sourceFileName": "src/types.ts",
+			"qualifiedName": "__type"
+		},
+		"73": {
+			"sourceFileName": "src/types.ts",
+			"qualifiedName": "args"
+		},
+		"74": {
+			"sourceFileName": "src/types.ts",
+			"qualifiedName": "Primitive"
+		},
+		"75": {
+			"sourceFileName": "src/types.ts",
+			"qualifiedName": "PrimitiveObject"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "src/index.ts",
+			"2": "LICENSE"
+		},
+		"reflections": {
+			"1": 0
+		}
+	}
+}
