@@ -1,5 +1,11 @@
 # @veloss/openapi-builder
 
+## 0.0.5
+
+### Patch Changes
+
+- 문서 추가
+
 ## 0.0.4
 
 ### Patch Changes
