@@ -1,9 +1,5 @@
 # @veloss/assertion
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![License][license-src]][license-href]
-
 데이터에 대한 타입을 검증하고 검증된 데이터를 안전한 타입으로 변환하는 라이브러리입니다.
 
 ## 🚀 Quick Start
@@ -263,30 +259,22 @@ isPromiseLike({ then: () => {} }); // true
 isPromiseLike({}); // false
 ```
 
-### Primitive
+### isPrimitive
 
 ```ts
-import { Primitive } from "@veloss/assertion";
+import { isPrimitive } from "@veloss/assertion";
 
-const a: Primitive = 1;
+isPrimitive(1); // true
 
-const b: Primitive = "1";
+isPrimitive("1"); // true
 
-const c: Primitive = true;
+isPrimitive(true); // true
 
-const d: Primitive = null;
+isPrimitive(null); // true
 
-const e: Primitive = undefined;
+isPrimitive(undefined); // true
 ```
 
 ## License
 
 [MIT](./LICENSE)
-
-```
-
-```
-
-```
-
-```

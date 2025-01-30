@@ -2,16 +2,15 @@ import type { AuthErrorCode } from "./code";
 import { BaseError, type BaseErrorConstructorOptions } from "../base";
 import { omit } from "../core/utils";
 
-interface IAuthError<DataT = unknown> extends BaseError<DataT> {
+export interface IAuthError<DataT = unknown> extends BaseError<DataT> {
   errorCode?: AuthErrorCode;
   statusCode?: number;
   fatal: boolean;
   unhandled: boolean;
-
   toJSON(): Pick<AuthError<DataT>, "message" | "statusCode" | "errorCode" | "data">;
 }
 
-interface AuthErrorConstructorOptions<DataT = unknown> extends BaseErrorConstructorOptions<DataT> {
+export interface AuthErrorConstructorOptions<DataT = unknown> extends BaseErrorConstructorOptions<DataT> {
   errorCode?: AuthErrorCode;
   statusCode?: number;
 }
@@ -126,3 +125,5 @@ export function createAuthError<DataT = unknown>(
 export function isAuthError<DataT = unknown>(input: any): input is AuthError<DataT> {
   return input?.constructor?.__auth_error__ === true;
 }
+
+export type { AuthErrorCode };
