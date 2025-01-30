@@ -29,6 +29,8 @@ const { createOpenApiFetch } = require("@veloss/openapi-ofetch");
 
 ## 📚 Documentation
 
+[openapi-ofetch](./docs/openapi-ofetch.md)
+
 ## License
 
 [MIT](./LICENSE)
