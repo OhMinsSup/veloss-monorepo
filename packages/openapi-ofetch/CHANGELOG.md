@@ -1,5 +1,11 @@
 # @veloss/openapi-ofetch
 
+## 0.0.4
+
+### Patch Changes
+
+- 문서 추가
+
 ## 0.0.3
 
 ### Patch Changes
