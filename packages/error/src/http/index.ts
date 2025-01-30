@@ -1,14 +1,13 @@
 import { BaseError, type BaseErrorConstructorOptions } from "../base";
 import { omit } from "../core/utils";
 
-interface IHttpError<DataT = unknown> extends BaseError<DataT> {
+export interface IHttpError<DataT = unknown> extends BaseError<DataT> {
   statusCode: number;
   statusMessage?: string;
-
   toJSON(): Pick<IHttpError<DataT>, "message" | "statusCode" | "statusMessage" | "data">;
 }
 
-interface HttpErrorConstructorOptions<DataT = unknown> extends BaseErrorConstructorOptions<DataT> {
+export interface HttpErrorConstructorOptions<DataT = unknown> extends BaseErrorConstructorOptions<DataT> {
   statusCode?: number;
   statusMessage?: string;
 }

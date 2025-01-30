@@ -1,11 +1,11 @@
 import { BaseError, type BaseErrorConstructorOptions } from "@veloss/error";
 
-interface IFetchError<DataT = unknown> extends BaseError<DataT> {
+export interface IFetchError<DataT = unknown> extends BaseError<DataT> {
   toJSON(): Pick<IFetchError<DataT>, "message" | "data">;
   toData(): DataT | undefined;
 }
 
-interface FetchErrorConstructorOptions<DataT = unknown> extends BaseErrorConstructorOptions<DataT> {
+export interface FetchErrorConstructorOptions<DataT = unknown> extends BaseErrorConstructorOptions<DataT> {
   statusCode?: number;
   statusMessage?: string;
 }

@@ -19,6 +19,7 @@ import {
   isPromiseLike,
   isString,
   isTrusted,
+  isPrimitive,
 } from "../src/index";
 
 test("isArray", () => {
@@ -209,4 +210,15 @@ test("isTrusted", () => {
   expect(isTrusted(undefined)).toBe(false);
   expect(isTrusted({})).toBe(false);
   expect(isTrusted([])).toBe(false);
+});
+
+test("isPrimitive", () => {
+  expect(isPrimitive(0)).toBe(true);
+  expect(isPrimitive("")).toBe(true);
+  expect(isPrimitive(false)).toBe(true);
+  expect(isPrimitive(true)).toBe(true);
+  expect(isPrimitive(null)).toBe(true);
+  expect(isPrimitive(undefined)).toBe(true);
+  expect(isPrimitive({})).toBe(false);
+  expect(isPrimitive([])).toBe(false);
 });

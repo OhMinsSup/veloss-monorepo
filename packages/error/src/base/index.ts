@@ -8,7 +8,7 @@ export interface BaseErrorConstructorOptions<DataT = unknown> {
   unhandled?: boolean;
 }
 
-interface IBaseError<DataT = unknown> extends Error {
+export interface IBaseError<DataT = unknown> extends Error {
   fatal: boolean;
   unhandled: boolean;
   data?: DataT;

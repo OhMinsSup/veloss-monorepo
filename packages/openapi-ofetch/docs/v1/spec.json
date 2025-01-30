@@ -1,0 +1,4812 @@
+{
+	"id": 0,
+	"name": "@veloss/openapi-ofetch",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 21,
+			"name": "FetchError",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"children": [
+				{
+					"id": 24,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 21,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L21"
+						}
+					],
+					"signatures": [
+						{
+							"id": 25,
+							"name": "FetchError",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/error.ts",
+									"line": 21,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L21"
+								}
+							],
+							"typeParameters": [
+								{
+									"id": 26,
+									"name": "DataT",
+									"variant": "typeParam",
+									"kind": 131072,
+									"flags": {},
+									"default": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 27,
+									"name": "message",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 28,
+									"name": "opts",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 42,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 26,
+												"name": "DataT",
+												"package": "@veloss/openapi-ofetch",
+												"qualifiedName": "FetchError.DataT",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "FetchErrorConstructorOptions",
+										"package": "@veloss/openapi-ofetch"
+									},
+									"defaultValue": "{}"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 21,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 26,
+										"name": "DataT",
+										"package": "@veloss/openapi-ofetch",
+										"qualifiedName": "FetchError.DataT",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "FetchError",
+								"package": "@veloss/openapi-ofetch"
+							},
+							"overwrites": {
+								"type": "reference",
+								"target": -1,
+								"name": "BaseError<DataT>.constructor"
+							}
+						}
+					],
+					"overwrites": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError<DataT>.constructor"
+					}
+				},
+				{
+					"id": 39,
+					"name": "cause",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 21,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.cause"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"target": 60,
+						"name": "IFetchError.cause"
+					}
+				},
+				{
+					"id": 40,
+					"name": "code",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 22,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.code"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"target": 61,
+						"name": "IFetchError.code"
+					}
+				},
+				{
+					"id": 38,
+					"name": "data",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 20,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 26,
+						"name": "DataT",
+						"package": "@veloss/openapi-ofetch",
+						"qualifiedName": "FetchError.DataT",
+						"refersToTypeParameter": true
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.data"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"target": 59,
+						"name": "IFetchError.data"
+					}
+				},
+				{
+					"id": 36,
+					"name": "fatal",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 18,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.fatal"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"target": 57,
+						"name": "IFetchError.fatal"
+					}
+				},
+				{
+					"id": 29,
+					"name": "name",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 14,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L14"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"defaultValue": "\"FetchError\"",
+					"overwrites": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.name"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"target": 56,
+						"name": "IFetchError.name"
+					}
+				},
+				{
+					"id": 30,
+					"name": "statusCode",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 16,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L16"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 31,
+					"name": "statusMessage",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 17,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L17"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 37,
+					"name": "unhandled",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 19,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.unhandled"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"target": 58,
+						"name": "IFetchError.unhandled"
+					}
+				},
+				{
+					"id": 23,
+					"name": "__base_error__",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isStatic": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 23,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.__base_error__"
+					}
+				},
+				{
+					"id": 22,
+					"name": "__fetch_error__",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isStatic": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 19,
+							"character": 9,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L19"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"defaultValue": "true"
+				},
+				{
+					"id": 34,
+					"name": "toData",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 53,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L53"
+						}
+					],
+					"signatures": [
+						{
+							"id": 35,
+							"name": "toData",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/error.ts",
+									"line": 53,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L53"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "reference",
+										"target": 26,
+										"name": "DataT",
+										"package": "@veloss/openapi-ofetch",
+										"qualifiedName": "FetchError.DataT",
+										"refersToTypeParameter": true
+									}
+								]
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 55,
+								"name": "IFetchError.toData"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 54,
+						"name": "IFetchError.toData"
+					}
+				},
+				{
+					"id": 32,
+					"name": "toJSON",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 33,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L33"
+						}
+					],
+					"signatures": [
+						{
+							"id": 33,
+							"name": "toJSON",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/error.ts",
+									"line": 33,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L33"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Pick"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 21,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 26,
+												"name": "DataT",
+												"package": "@veloss/openapi-ofetch",
+												"qualifiedName": "FetchError.DataT",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "FetchError",
+										"package": "@veloss/openapi-ofetch"
+									},
+									{
+										"type": "union",
+										"types": [
+											{
+												"type": "literal",
+												"value": "message"
+											},
+											{
+												"type": "literal",
+												"value": "data"
+											},
+											{
+												"type": "literal",
+												"value": "statusCode"
+											},
+											{
+												"type": "literal",
+												"value": "statusMessage"
+											}
+										]
+									}
+								],
+								"name": "Pick",
+								"package": "typescript"
+							},
+							"overwrites": {
+								"type": "reference",
+								"target": -1,
+								"name": "BaseError.toJSON"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 53,
+								"name": "IFetchError.toJSON"
+							}
+						}
+					],
+					"overwrites": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.toJSON"
+					},
+					"implementationOf": {
+						"type": "reference",
+						"target": 52,
+						"name": "IFetchError.toJSON"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						24
+					]
+				},
+				{
+					"title": "Properties",
+					"children": [
+						39,
+						40,
+						38,
+						36,
+						29,
+						30,
+						31,
+						37,
+						23,
+						22
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						34,
+						32
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/error.ts",
+					"line": 13,
+					"character": 13,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L13"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 41,
+					"name": "DataT",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"default": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"target": {
+						"sourceFileName": "../error/dist/index.d.ts",
+						"qualifiedName": "BaseError"
+					},
+					"typeArguments": [
+						{
+							"type": "reference",
+							"target": 26,
+							"name": "DataT",
+							"package": "@veloss/openapi-ofetch",
+							"qualifiedName": "FetchError.DataT",
+							"refersToTypeParameter": true
+						}
+					],
+					"name": "BaseError",
+					"package": "@veloss/error"
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"target": 51,
+					"typeArguments": [
+						{
+							"type": "reference",
+							"target": 26,
+							"name": "DataT",
+							"package": "@veloss/openapi-ofetch",
+							"qualifiedName": "FetchError.DataT",
+							"refersToTypeParameter": true
+						}
+					],
+					"name": "IFetchError",
+					"package": "@veloss/openapi-ofetch"
+				}
+			]
+		},
+		{
+			"id": 98,
+			"name": "FetchClientRequestInit",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 100,
+					"name": "method",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+							"line": 15,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L15"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 102,
+						"name": "Method",
+						"package": "@veloss/openapi-ofetch",
+						"qualifiedName": "FetchClientRequestInit.Method",
+						"refersToTypeParameter": true
+					}
+				},
+				{
+					"id": 99,
+					"name": "path",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+							"line": 14,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L14"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 103,
+						"name": "Path",
+						"package": "@veloss/openapi-ofetch",
+						"qualifiedName": "FetchClientRequestInit.Path",
+						"refersToTypeParameter": true
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						100,
+						99
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+					"line": 9,
+					"character": 17,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L9"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 101,
+					"name": "Paths",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": 66,
+						"name": "DefaultOpenApiPaths",
+						"package": "@veloss/openapi-ofetch"
+					}
+				},
+				{
+					"id": 102,
+					"name": "Method",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "HttpMethod"
+						},
+						"name": "HttpMethod",
+						"package": "openapi-typescript-helpers"
+					}
+				},
+				{
+					"id": 103,
+					"name": "Path",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "PathsWithMethod"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 101,
+								"name": "Paths",
+								"package": "@veloss/openapi-ofetch",
+								"qualifiedName": "FetchClientRequestInit.Paths",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": 102,
+								"name": "Method",
+								"package": "@veloss/openapi-ofetch",
+								"qualifiedName": "FetchClientRequestInit.Method",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "PathsWithMethod",
+						"package": "openapi-typescript-helpers"
+					}
+				}
+			]
+		},
+		{
+			"id": 42,
+			"name": "FetchErrorConstructorOptions",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 45,
+					"name": "cause",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 2,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseErrorConstructorOptions.cause"
+					}
+				},
+				{
+					"id": 46,
+					"name": "code",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 3,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseErrorConstructorOptions.code"
+					}
+				},
+				{
+					"id": 47,
+					"name": "data",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 4,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 50,
+						"name": "DataT",
+						"package": "@veloss/openapi-ofetch",
+						"qualifiedName": "FetchErrorConstructorOptions.DataT",
+						"refersToTypeParameter": true
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseErrorConstructorOptions.data"
+					}
+				},
+				{
+					"id": 48,
+					"name": "fatal",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 5,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseErrorConstructorOptions.fatal"
+					}
+				},
+				{
+					"id": 43,
+					"name": "statusCode",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L9"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 44,
+					"name": "statusMessage",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 10,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L10"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 49,
+					"name": "unhandled",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 6,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseErrorConstructorOptions.unhandled"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						45,
+						46,
+						47,
+						48,
+						43,
+						44,
+						49
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/error.ts",
+					"line": 8,
+					"character": 17,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L8"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 50,
+					"name": "DataT",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"default": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"target": {
+						"sourceFileName": "../error/dist/index.d.ts",
+						"qualifiedName": "BaseErrorConstructorOptions"
+					},
+					"typeArguments": [
+						{
+							"type": "reference",
+							"target": 50,
+							"name": "DataT",
+							"package": "@veloss/openapi-ofetch",
+							"qualifiedName": "FetchErrorConstructorOptions.DataT",
+							"refersToTypeParameter": true
+						}
+					],
+					"name": "BaseErrorConstructorOptions",
+					"package": "@veloss/error"
+				}
+			]
+		},
+		{
+			"id": 78,
+			"name": "FetchOptions",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 80,
+					"name": "AbortController",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/global.types.ts",
+							"line": 25,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L25"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 81,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.dom.d.ts",
+									"line": 2510,
+									"character": 29
+								}
+							],
+							"signatures": [
+								{
+									"id": 82,
+									"name": "AbortController",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.dom.d.ts",
+											"line": 2512,
+											"character": 4
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.dom.d.ts",
+											"qualifiedName": "AbortController"
+										},
+										"name": "AbortController",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 79,
+					"name": "base",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/global.types.ts",
+							"line": 24,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L24"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "reference",
+								"target": 63,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 92,
+										"name": "Paths",
+										"package": "@veloss/openapi-ofetch",
+										"qualifiedName": "FetchOptions.Paths",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": 93,
+										"name": "Media",
+										"package": "@veloss/openapi-ofetch",
+										"qualifiedName": "FetchOptions.Media",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "Fetch",
+								"package": "@veloss/openapi-ofetch"
+							}
+						]
+					}
+				},
+				{
+					"id": 83,
+					"name": "middleware",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/global.types.ts",
+							"line": 26,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L26"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-fetch@0.13.4/node_modules/openapi-fetch/dist/index.d.ts",
+							"qualifiedName": "Middleware"
+						},
+						"name": "Middleware",
+						"package": "openapi-fetch"
+					}
+				},
+				{
+					"id": 84,
+					"name": "retry",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/global.types.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L9"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "number"
+							},
+							{
+								"type": "literal",
+								"value": false
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "OtherFetchOptions.retry"
+					}
+				},
+				{
+					"id": 85,
+					"name": "retryDelay",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/global.types.ts",
+							"line": 11,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L11"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "number"
+							},
+							{
+								"type": "literal",
+								"value": true
+							},
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 86,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "packages/openapi-ofetch/src/global.types.ts",
+											"line": 11,
+											"character": 25,
+											"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L11"
+										}
+									],
+									"signatures": [
+										{
+											"id": 87,
+											"name": "__type",
+											"variant": "signature",
+											"kind": 4096,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "packages/openapi-ofetch/src/global.types.ts",
+													"line": 11,
+													"character": 25,
+													"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L11"
+												}
+											],
+											"parameters": [
+												{
+													"id": 88,
+													"name": "retries",
+													"variant": "param",
+													"kind": 32768,
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									]
+								}
+							}
+						]
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "OtherFetchOptions.retryDelay"
+					}
+				},
+				{
+					"id": 89,
+					"name": "retryStatusCodes",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/global.types.ts",
+							"line": 13,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L13"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "number"
+						}
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "OtherFetchOptions.retryStatusCodes"
+					}
+				},
+				{
+					"id": 91,
+					"name": "shouldThrowOnError",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/global.types.ts",
+							"line": 17,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L17"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "OtherFetchOptions.shouldThrowOnError"
+					}
+				},
+				{
+					"id": 90,
+					"name": "timeout",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/global.types.ts",
+							"line": 15,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L15"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "OtherFetchOptions.timeout"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						80,
+						79,
+						83,
+						84,
+						85,
+						89,
+						91,
+						90
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/global.types.ts",
+					"line": 22,
+					"character": 17,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L22"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 92,
+					"name": "Paths",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": 66,
+						"name": "DefaultOpenApiPaths",
+						"package": "@veloss/openapi-ofetch"
+					}
+				},
+				{
+					"id": 93,
+					"name": "Media",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					},
+					"default": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					}
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"target": 77,
+					"name": "OtherFetchOptions",
+					"package": "@veloss/openapi-ofetch"
+				}
+			]
+		},
+		{
+			"id": 51,
+			"name": "IFetchError",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 60,
+					"name": "cause",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 21,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.cause"
+					}
+				},
+				{
+					"id": 61,
+					"name": "code",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 22,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.code"
+					}
+				},
+				{
+					"id": 59,
+					"name": "data",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true,
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 20,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 62,
+						"name": "DataT",
+						"package": "@veloss/openapi-ofetch",
+						"qualifiedName": "IFetchError.DataT",
+						"refersToTypeParameter": true
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.data"
+					}
+				},
+				{
+					"id": 57,
+					"name": "fatal",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 18,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.fatal"
+					}
+				},
+				{
+					"id": 56,
+					"name": "name",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 17,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.name"
+					}
+				},
+				{
+					"id": 58,
+					"name": "unhandled",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isInherited": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/error/dist/index.d.ts",
+							"line": 19,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"inheritedFrom": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.unhandled"
+					}
+				},
+				{
+					"id": 54,
+					"name": "toData",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 5,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L5"
+						}
+					],
+					"signatures": [
+						{
+							"id": 55,
+							"name": "toData",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/error.ts",
+									"line": 5,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L5"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "reference",
+										"target": 62,
+										"name": "DataT",
+										"package": "@veloss/openapi-ofetch",
+										"qualifiedName": "IFetchError.DataT",
+										"refersToTypeParameter": true
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 52,
+					"name": "toJSON",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 4,
+							"character": 2,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L4"
+						}
+					],
+					"signatures": [
+						{
+							"id": 53,
+							"name": "toJSON",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/error.ts",
+									"line": 4,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L4"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Pick"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 51,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 62,
+												"name": "DataT",
+												"package": "@veloss/openapi-ofetch",
+												"qualifiedName": "IFetchError.DataT",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "IFetchError",
+										"package": "@veloss/openapi-ofetch"
+									},
+									{
+										"type": "union",
+										"types": [
+											{
+												"type": "literal",
+												"value": "message"
+											},
+											{
+												"type": "literal",
+												"value": "data"
+											}
+										]
+									}
+								],
+								"name": "Pick",
+								"package": "typescript"
+							},
+							"overwrites": {
+								"type": "reference",
+								"target": -1,
+								"name": "BaseError.toJSON"
+							}
+						}
+					],
+					"overwrites": {
+						"type": "reference",
+						"target": -1,
+						"name": "BaseError.toJSON"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						60,
+						61,
+						59,
+						57,
+						56,
+						58
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						54,
+						52
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/error.ts",
+					"line": 3,
+					"character": 17,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L3"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 62,
+					"name": "DataT",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"default": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"target": {
+						"sourceFileName": "../error/dist/index.d.ts",
+						"qualifiedName": "BaseError"
+					},
+					"typeArguments": [
+						{
+							"type": "reference",
+							"target": 62,
+							"name": "DataT",
+							"package": "@veloss/openapi-ofetch",
+							"qualifiedName": "IFetchError.DataT",
+							"refersToTypeParameter": true
+						}
+					],
+					"name": "BaseError",
+					"package": "@veloss/error"
+				}
+			],
+			"implementedBy": [
+				{
+					"type": "reference",
+					"target": 21,
+					"name": "FetchError"
+				}
+			]
+		},
+		{
+			"id": 66,
+			"name": "DefaultOpenApiPaths",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/global.types.ts",
+					"line": 6,
+					"character": 12,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L6"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.es5.d.ts",
+					"qualifiedName": "Record"
+				},
+				"typeArguments": [
+					{
+						"type": "intrinsic",
+						"name": "string"
+					},
+					{
+						"type": "intrinsic",
+						"name": "any"
+					}
+				],
+				"name": "Record",
+				"package": "typescript"
+			}
+		},
+		{
+			"id": 67,
+			"name": "ExpandedFetchOptions",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/global.types.ts",
+					"line": 8,
+					"character": 12,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L8"
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 68,
+					"name": "__type",
+					"variant": "declaration",
+					"kind": 65536,
+					"flags": {},
+					"children": [
+						{
+							"id": 69,
+							"name": "retry",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/global.types.ts",
+									"line": 9,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L9"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "literal",
+										"value": false
+									}
+								]
+							}
+						},
+						{
+							"id": 70,
+							"name": "retryDelay",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/global.types.ts",
+									"line": 11,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L11"
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reflection",
+										"declaration": {
+											"id": 71,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "packages/openapi-ofetch/src/global.types.ts",
+													"line": 11,
+													"character": 25,
+													"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L11"
+												}
+											],
+											"signatures": [
+												{
+													"id": 72,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"parameters": [
+														{
+															"id": 73,
+															"name": "retries",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "number"
+															}
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												}
+											]
+										}
+									},
+									{
+										"type": "literal",
+										"value": true
+									}
+								]
+							}
+						},
+						{
+							"id": 74,
+							"name": "retryStatusCodes",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/global.types.ts",
+									"line": 13,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L13"
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "number"
+								}
+							}
+						},
+						{
+							"id": 76,
+							"name": "shouldThrowOnError",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/global.types.ts",
+									"line": 17,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L17"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						},
+						{
+							"id": 75,
+							"name": "timeout",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/global.types.ts",
+									"line": 15,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L15"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								69,
+								70,
+								74,
+								76,
+								75
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/global.types.ts",
+							"line": 8,
+							"character": 35,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L8"
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 63,
+			"name": "Fetch",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/global.types.ts",
+					"line": 4,
+					"character": 12,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L4"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 64,
+					"name": "Paths",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": 66,
+						"name": "DefaultOpenApiPaths",
+						"package": "@veloss/openapi-ofetch"
+					}
+				},
+				{
+					"id": 65,
+					"name": "Media",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					},
+					"default": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					}
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"sourceFileName": "../../node_modules/.pnpm/openapi-fetch@0.13.4/node_modules/openapi-fetch/dist/index.d.ts",
+					"qualifiedName": "Client"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": 64,
+						"name": "Paths",
+						"package": "@veloss/openapi-ofetch",
+						"refersToTypeParameter": true
+					},
+					{
+						"type": "reference",
+						"target": 65,
+						"name": "Media",
+						"package": "@veloss/openapi-ofetch",
+						"refersToTypeParameter": true
+					}
+				],
+				"name": "Client",
+				"package": "openapi-fetch"
+			}
+		},
+		{
+			"id": 110,
+			"name": "FetchClientContext",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+					"line": 31,
+					"character": 12,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L31"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 116,
+					"name": "Paths",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": 66,
+						"name": "DefaultOpenApiPaths",
+						"package": "@veloss/openapi-ofetch"
+					}
+				},
+				{
+					"id": 117,
+					"name": "Method",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "HttpMethod"
+						},
+						"name": "HttpMethod",
+						"package": "openapi-typescript-helpers"
+					}
+				},
+				{
+					"id": 118,
+					"name": "Path",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "PathsWithMethod"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 116,
+								"name": "Paths",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": 117,
+								"name": "Method",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "PathsWithMethod",
+						"package": "openapi-typescript-helpers"
+					}
+				},
+				{
+					"id": 119,
+					"name": "Init",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-fetch@0.13.4/node_modules/openapi-fetch/dist/index.d.ts",
+							"qualifiedName": "MaybeOptionalInit"
+						},
+						"typeArguments": [
+							{
+								"type": "indexedAccess",
+								"indexType": {
+									"type": "reference",
+									"target": 118,
+									"name": "Path",
+									"package": "@veloss/openapi-ofetch",
+									"refersToTypeParameter": true
+								},
+								"objectType": {
+									"type": "reference",
+									"target": 116,
+									"name": "Paths",
+									"package": "@veloss/openapi-ofetch",
+									"refersToTypeParameter": true
+								}
+							},
+							{
+								"type": "reference",
+								"target": 117,
+								"name": "Method",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "MaybeOptionalInit",
+						"package": "openapi-fetch"
+					}
+				},
+				{
+					"id": 120,
+					"name": "Media",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					},
+					"default": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					}
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 111,
+					"name": "__type",
+					"variant": "declaration",
+					"kind": 65536,
+					"flags": {},
+					"children": [
+						{
+							"id": 115,
+							"name": "error",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+									"line": 41,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L41"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 21,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 110,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 116,
+												"name": "Paths",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 117,
+												"name": "Method",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 118,
+												"name": "Path",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 119,
+												"name": "Init",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 120,
+												"name": "Media",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "FetchClientContext",
+										"package": "@veloss/openapi-ofetch"
+									}
+								],
+								"name": "FetchError",
+								"package": "@veloss/openapi-ofetch"
+							}
+						},
+						{
+							"id": 113,
+							"name": "options",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+									"line": 39,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L39"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 104,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 116,
+										"name": "Paths",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": 117,
+										"name": "Method",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": 118,
+										"name": "Path",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": 119,
+										"name": "Init",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": 120,
+										"name": "Media",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "FetchClientOptions",
+								"package": "@veloss/openapi-ofetch"
+							}
+						},
+						{
+							"id": 112,
+							"name": "request",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+									"line": 38,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L38"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 98,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 116,
+										"name": "Paths",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": 117,
+										"name": "Method",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": 118,
+										"name": "Path",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "FetchClientRequestInit",
+								"package": "@veloss/openapi-ofetch"
+							}
+						},
+						{
+							"id": 114,
+							"name": "response",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+									"line": 40,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L40"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../../node_modules/.pnpm/openapi-fetch@0.13.4/node_modules/openapi-fetch/dist/index.d.ts",
+									"qualifiedName": "FetchResponse"
+								},
+								"typeArguments": [
+									{
+										"type": "indexedAccess",
+										"indexType": {
+											"type": "reference",
+											"target": 117,
+											"name": "Method",
+											"package": "@veloss/openapi-ofetch",
+											"refersToTypeParameter": true
+										},
+										"objectType": {
+											"type": "indexedAccess",
+											"indexType": {
+												"type": "reference",
+												"target": 118,
+												"name": "Path",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											"objectType": {
+												"type": "reference",
+												"target": 116,
+												"name": "Paths",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											}
+										}
+									},
+									{
+										"type": "reference",
+										"target": 119,
+										"name": "Init",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": 120,
+										"name": "Media",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "FetchResponse",
+								"package": "openapi-fetch"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								115,
+								113,
+								112,
+								114
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+							"line": 37,
+							"character": 4,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L37"
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 104,
+			"name": "FetchClientOptions",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+					"line": 18,
+					"character": 12,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L18"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 105,
+					"name": "Paths",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": 66,
+						"name": "DefaultOpenApiPaths",
+						"package": "@veloss/openapi-ofetch"
+					}
+				},
+				{
+					"id": 106,
+					"name": "Method",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "HttpMethod"
+						},
+						"name": "HttpMethod",
+						"package": "openapi-typescript-helpers"
+					}
+				},
+				{
+					"id": 107,
+					"name": "Path",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "PathsWithMethod"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 105,
+								"name": "Paths",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": 106,
+								"name": "Method",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "PathsWithMethod",
+						"package": "openapi-typescript-helpers"
+					}
+				},
+				{
+					"id": 108,
+					"name": "Init",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-fetch@0.13.4/node_modules/openapi-fetch/dist/index.d.ts",
+							"qualifiedName": "MaybeOptionalInit"
+						},
+						"typeArguments": [
+							{
+								"type": "indexedAccess",
+								"indexType": {
+									"type": "reference",
+									"target": 107,
+									"name": "Path",
+									"package": "@veloss/openapi-ofetch",
+									"refersToTypeParameter": true
+								},
+								"objectType": {
+									"type": "reference",
+									"target": 105,
+									"name": "Paths",
+									"package": "@veloss/openapi-ofetch",
+									"refersToTypeParameter": true
+								}
+							},
+							{
+								"type": "reference",
+								"target": 106,
+								"name": "Method",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "MaybeOptionalInit",
+						"package": "openapi-fetch"
+					}
+				},
+				{
+					"id": 109,
+					"name": "Media",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					},
+					"default": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					}
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"target": 108,
+						"name": "Init",
+						"package": "@veloss/openapi-ofetch",
+						"refersToTypeParameter": true
+					},
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.es5.d.ts",
+							"qualifiedName": "Pick"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 78,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 105,
+										"name": "Paths",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": 109,
+										"name": "Media",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "FetchOptions",
+								"package": "@veloss/openapi-ofetch"
+							},
+							{
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "timeout"
+									},
+									{
+										"type": "literal",
+										"value": "retry"
+									},
+									{
+										"type": "literal",
+										"value": "retryDelay"
+									},
+									{
+										"type": "literal",
+										"value": "retryStatusCodes"
+									},
+									{
+										"type": "literal",
+										"value": "base"
+									},
+									{
+										"type": "literal",
+										"value": "shouldThrowOnError"
+									}
+								]
+							}
+						],
+						"name": "Pick",
+						"package": "typescript"
+					},
+					{
+						"type": "reference",
+						"target": 130,
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 105,
+								"name": "Paths",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": 106,
+								"name": "Method",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": 107,
+								"name": "Path",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": 108,
+								"name": "Init",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": 109,
+								"name": "Media",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "FetchMiddlewareFactory",
+						"package": "@veloss/openapi-ofetch"
+					}
+				]
+			}
+		},
+		{
+			"id": 121,
+			"name": "FetchMiddleware",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+					"line": 44,
+					"character": 12,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L44"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 125,
+					"name": "Paths",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": 66,
+						"name": "DefaultOpenApiPaths",
+						"package": "@veloss/openapi-ofetch"
+					}
+				},
+				{
+					"id": 126,
+					"name": "Method",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "HttpMethod"
+						},
+						"name": "HttpMethod",
+						"package": "openapi-typescript-helpers"
+					}
+				},
+				{
+					"id": 127,
+					"name": "Path",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "PathsWithMethod"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 125,
+								"name": "Paths",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": 126,
+								"name": "Method",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "PathsWithMethod",
+						"package": "openapi-typescript-helpers"
+					}
+				},
+				{
+					"id": 128,
+					"name": "Init",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-fetch@0.13.4/node_modules/openapi-fetch/dist/index.d.ts",
+							"qualifiedName": "MaybeOptionalInit"
+						},
+						"typeArguments": [
+							{
+								"type": "indexedAccess",
+								"indexType": {
+									"type": "reference",
+									"target": 127,
+									"name": "Path",
+									"package": "@veloss/openapi-ofetch",
+									"refersToTypeParameter": true
+								},
+								"objectType": {
+									"type": "reference",
+									"target": 125,
+									"name": "Paths",
+									"package": "@veloss/openapi-ofetch",
+									"refersToTypeParameter": true
+								}
+							},
+							{
+								"type": "reference",
+								"target": 126,
+								"name": "Method",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "MaybeOptionalInit",
+						"package": "openapi-fetch"
+					}
+				},
+				{
+					"id": 129,
+					"name": "Media",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					},
+					"default": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					}
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 122,
+					"name": "__type",
+					"variant": "declaration",
+					"kind": 65536,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+							"line": 50,
+							"character": 4,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L50"
+						}
+					],
+					"signatures": [
+						{
+							"id": 123,
+							"name": "__type",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"parameters": [
+								{
+									"id": 124,
+									"name": "context",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 110,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 125,
+												"name": "Paths",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 126,
+												"name": "Method",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 127,
+												"name": "Path",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 128,
+												"name": "Init",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 129,
+												"name": "Media",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "FetchClientContext",
+										"package": "@veloss/openapi-ofetch"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 94,
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "MaybePromise",
+								"package": "@veloss/openapi-ofetch"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 130,
+			"name": "FetchMiddlewareFactory",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+					"line": 52,
+					"character": 12,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L52"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 135,
+					"name": "Paths",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": 66,
+						"name": "DefaultOpenApiPaths",
+						"package": "@veloss/openapi-ofetch"
+					}
+				},
+				{
+					"id": 136,
+					"name": "Method",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "HttpMethod"
+						},
+						"name": "HttpMethod",
+						"package": "openapi-typescript-helpers"
+					}
+				},
+				{
+					"id": 137,
+					"name": "Path",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "PathsWithMethod"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 135,
+								"name": "Paths",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": 136,
+								"name": "Method",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "PathsWithMethod",
+						"package": "openapi-typescript-helpers"
+					}
+				},
+				{
+					"id": 138,
+					"name": "Init",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-fetch@0.13.4/node_modules/openapi-fetch/dist/index.d.ts",
+							"qualifiedName": "MaybeOptionalInit"
+						},
+						"typeArguments": [
+							{
+								"type": "indexedAccess",
+								"indexType": {
+									"type": "reference",
+									"target": 137,
+									"name": "Path",
+									"package": "@veloss/openapi-ofetch",
+									"refersToTypeParameter": true
+								},
+								"objectType": {
+									"type": "reference",
+									"target": 135,
+									"name": "Paths",
+									"package": "@veloss/openapi-ofetch",
+									"refersToTypeParameter": true
+								}
+							},
+							{
+								"type": "reference",
+								"target": 136,
+								"name": "Method",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "MaybeOptionalInit",
+						"package": "openapi-fetch"
+					}
+				},
+				{
+					"id": 139,
+					"name": "Media",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					},
+					"default": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+							"qualifiedName": "MediaType"
+						},
+						"name": "MediaType",
+						"package": "openapi-typescript-helpers"
+					}
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 131,
+					"name": "__type",
+					"variant": "declaration",
+					"kind": 65536,
+					"flags": {},
+					"children": [
+						{
+							"id": 134,
+							"name": "onFetchError",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+									"line": 61,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L61"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 96,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 121,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 135,
+												"name": "Paths",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 136,
+												"name": "Method",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 137,
+												"name": "Path",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 138,
+												"name": "Init",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 139,
+												"name": "Media",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "FetchMiddleware",
+										"package": "@veloss/openapi-ofetch"
+									}
+								],
+								"name": "MaybeArray",
+								"package": "@veloss/openapi-ofetch"
+							}
+						},
+						{
+							"id": 132,
+							"name": "onFetchRequest",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+									"line": 59,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L59"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 96,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 121,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 135,
+												"name": "Paths",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 136,
+												"name": "Method",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 137,
+												"name": "Path",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 138,
+												"name": "Init",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 139,
+												"name": "Media",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "FetchMiddleware",
+										"package": "@veloss/openapi-ofetch"
+									}
+								],
+								"name": "MaybeArray",
+								"package": "@veloss/openapi-ofetch"
+							}
+						},
+						{
+							"id": 133,
+							"name": "onFetchResponse",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+									"line": 60,
+									"character": 2,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L60"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 96,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 121,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 135,
+												"name": "Paths",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 136,
+												"name": "Method",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 137,
+												"name": "Path",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 138,
+												"name": "Init",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": 139,
+												"name": "Media",
+												"package": "@veloss/openapi-ofetch",
+												"refersToTypeParameter": true
+											}
+										],
+										"name": "FetchMiddleware",
+										"package": "@veloss/openapi-ofetch"
+									}
+								],
+								"name": "MaybeArray",
+								"package": "@veloss/openapi-ofetch"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								134,
+								132,
+								133
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+							"line": 58,
+							"character": 4,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L58"
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 96,
+			"name": "MaybeArray",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+					"line": 7,
+					"character": 12,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L7"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 97,
+					"name": "T",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {}
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "reference",
+						"target": 97,
+						"name": "T",
+						"package": "@veloss/openapi-ofetch",
+						"refersToTypeParameter": true
+					},
+					{
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"target": 97,
+							"name": "T",
+							"package": "@veloss/openapi-ofetch",
+							"refersToTypeParameter": true
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 94,
+			"name": "MaybePromise",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/fetch.types.ts",
+					"line": 6,
+					"character": 12,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.types.ts#L6"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 95,
+					"name": "T",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {}
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "reference",
+						"target": 95,
+						"name": "T",
+						"package": "@veloss/openapi-ofetch",
+						"refersToTypeParameter": true
+					},
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.es5.d.ts",
+							"qualifiedName": "Promise"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 95,
+								"name": "T",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "Promise",
+						"package": "typescript"
+					}
+				]
+			}
+		},
+		{
+			"id": 77,
+			"name": "OtherFetchOptions",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/global.types.ts",
+					"line": 20,
+					"character": 12,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/global.types.ts#L20"
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.es5.d.ts",
+							"qualifiedName": "Omit"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../../node_modules/.pnpm/openapi-fetch@0.13.4/node_modules/openapi-fetch/dist/index.d.ts",
+									"qualifiedName": "ClientOptions"
+								},
+								"name": "OpenApiFetchClientOptions",
+								"package": "openapi-fetch",
+								"qualifiedName": "ClientOptions"
+							},
+							{
+								"type": "literal",
+								"value": "baseUrl"
+							}
+						],
+						"name": "Omit",
+						"package": "typescript"
+					},
+					{
+						"type": "reference",
+						"target": 67,
+						"name": "ExpandedFetchOptions",
+						"package": "@veloss/openapi-ofetch"
+					}
+				]
+			},
+			"extendedBy": [
+				{
+					"type": "reference",
+					"target": 78,
+					"name": "FetchOptions"
+				}
+			]
+		},
+		{
+			"id": 17,
+			"name": "createFetchError",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/error.ts",
+					"line": 58,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L58"
+				}
+			],
+			"signatures": [
+				{
+					"id": 18,
+					"name": "createFetchError",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 58,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L58"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 19,
+							"name": "DataT",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"default": {
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 20,
+							"name": "input",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Partial"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 21,
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 19,
+														"name": "DataT",
+														"package": "@veloss/openapi-ofetch",
+														"refersToTypeParameter": true
+													}
+												],
+												"name": "FetchError",
+												"package": "@veloss/openapi-ofetch"
+											}
+										],
+										"name": "Partial",
+										"package": "typescript"
+									}
+								]
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 21,
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 19,
+								"name": "DataT",
+								"package": "@veloss/openapi-ofetch",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "FetchError",
+						"package": "@veloss/openapi-ofetch"
+					}
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "createOpenApiFetch",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/fetch.ts",
+					"line": 14,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.ts#L14"
+				}
+			],
+			"signatures": [
+				{
+					"id": 2,
+					"name": "createOpenApiFetch",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/fetch.ts",
+							"line": 14,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.ts#L14"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 3,
+							"name": "Paths",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 66,
+								"name": "DefaultOpenApiPaths",
+								"package": "@veloss/openapi-ofetch"
+							}
+						},
+						{
+							"id": 4,
+							"name": "Media",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"type": {
+								"type": "templateLiteral",
+								"head": "",
+								"tail": [
+									[
+										{
+											"type": "intrinsic",
+											"name": "string"
+										},
+										"/"
+									],
+									[
+										{
+											"type": "intrinsic",
+											"name": "string"
+										},
+										""
+									]
+								]
+							},
+							"default": {
+								"type": "templateLiteral",
+								"head": "",
+								"tail": [
+									[
+										{
+											"type": "intrinsic",
+											"name": "string"
+										},
+										"/"
+									],
+									[
+										{
+											"type": "intrinsic",
+											"name": "string"
+										},
+										""
+									]
+								]
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 5,
+							"name": "global",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 78,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 3,
+										"name": "Paths",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": 4,
+										"name": "Media",
+										"package": "@veloss/openapi-ofetch",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "FetchOptions",
+								"package": "@veloss/openapi-ofetch"
+							},
+							"defaultValue": "{}"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 6,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/openapi-ofetch/src/fetch.ts",
+									"line": 99,
+									"character": 38,
+									"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.ts#L99"
+								}
+							],
+							"signatures": [
+								{
+									"id": 7,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "packages/openapi-ofetch/src/fetch.ts",
+											"line": 99,
+											"character": 38,
+											"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/fetch.ts#L99"
+										}
+									],
+									"typeParameters": [
+										{
+											"id": 8,
+											"name": "Method",
+											"variant": "typeParam",
+											"kind": 131072,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../node_modules/.pnpm/openapi-typescript-helpers@0.0.15/node_modules/openapi-typescript-helpers/index.d.ts",
+													"qualifiedName": "HttpMethod"
+												},
+												"name": "HttpMethod",
+												"package": "openapi-typescript-helpers"
+											}
+										},
+										{
+											"id": 9,
+											"name": "Path",
+											"variant": "typeParam",
+											"kind": 131072,
+											"flags": {},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "number"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										},
+										{
+											"id": 10,
+											"name": "Init",
+											"variant": "typeParam",
+											"kind": 131072,
+											"flags": {},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													},
+													{
+														"type": "unknown",
+														"name": "((DefaultParamsOption | { params?: any; }) & ({ body?: undefined; } | { body?: OperationRequestBodyContent<FilterKeys<Paths[Path], Method>> | undefined; } | { ...; })) & { ...; } & Omit<...>"
+													}
+												]
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 11,
+											"name": "request",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 98,
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 3,
+														"name": "Paths",
+														"package": "@veloss/openapi-ofetch",
+														"refersToTypeParameter": true
+													},
+													{
+														"type": "reference",
+														"target": 8,
+														"name": "Method",
+														"package": "@veloss/openapi-ofetch",
+														"refersToTypeParameter": true
+													},
+													{
+														"type": "reference",
+														"target": 9,
+														"name": "Path",
+														"package": "@veloss/openapi-ofetch",
+														"refersToTypeParameter": true
+													}
+												],
+												"name": "FetchClientRequestInit",
+												"package": "@veloss/openapi-ofetch"
+											}
+										},
+										{
+											"id": 12,
+											"name": "options",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"target": 104,
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 3,
+														"name": "Paths",
+														"package": "@veloss/openapi-ofetch",
+														"refersToTypeParameter": true
+													},
+													{
+														"type": "reference",
+														"target": 8,
+														"name": "Method",
+														"package": "@veloss/openapi-ofetch",
+														"refersToTypeParameter": true
+													},
+													{
+														"type": "reference",
+														"target": 9,
+														"name": "Path",
+														"package": "@veloss/openapi-ofetch",
+														"refersToTypeParameter": true
+													},
+													{
+														"type": "reference",
+														"target": 10,
+														"name": "Init",
+														"package": "@veloss/openapi-ofetch",
+														"refersToTypeParameter": true
+													},
+													{
+														"type": "reference",
+														"target": 4,
+														"name": "Media",
+														"package": "@veloss/openapi-ofetch",
+														"refersToTypeParameter": true
+													}
+												],
+												"name": "FetchClientOptions",
+												"package": "@veloss/openapi-ofetch"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													},
+													{
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/.pnpm/openapi-fetch@0.13.4/node_modules/openapi-fetch/dist/index.d.ts",
+															"qualifiedName": "FetchResponse"
+														},
+														"typeArguments": [
+															{
+																"type": "indexedAccess",
+																"indexType": {
+																	"type": "reference",
+																	"target": 8,
+																	"name": "Method",
+																	"package": "@veloss/openapi-ofetch",
+																	"refersToTypeParameter": true
+																},
+																"objectType": {
+																	"type": "indexedAccess",
+																	"indexType": {
+																		"type": "reference",
+																		"target": 9,
+																		"name": "Path",
+																		"package": "@veloss/openapi-ofetch",
+																		"refersToTypeParameter": true
+																	},
+																	"objectType": {
+																		"type": "reference",
+																		"target": 3,
+																		"name": "Paths",
+																		"package": "@veloss/openapi-ofetch",
+																		"refersToTypeParameter": true
+																	}
+																}
+															},
+															{
+																"type": "reference",
+																"target": 10,
+																"name": "Init",
+																"package": "@veloss/openapi-ofetch",
+																"refersToTypeParameter": true
+															},
+															{
+																"type": "reference",
+																"target": 4,
+																"name": "Media",
+																"package": "@veloss/openapi-ofetch",
+																"refersToTypeParameter": true
+															}
+														],
+														"name": "FetchResponse",
+														"package": "openapi-fetch"
+													}
+												]
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 13,
+			"name": "isFetchError",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/openapi-ofetch/src/error.ts",
+					"line": 113,
+					"character": 16,
+					"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L113"
+				}
+			],
+			"signatures": [
+				{
+					"id": 14,
+					"name": "isFetchError",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/openapi-ofetch/src/error.ts",
+							"line": 113,
+							"character": 16,
+							"url": "https://github.com/OhMinsSup/veloss-monorepo/blob/da9f307c13d9794455b87bc39e6e90a4fcb302c8/packages/openapi-ofetch/src/error.ts#L113"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 15,
+							"name": "DataT",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"default": {
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 16,
+							"name": "input",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"type": {
+						"type": "predicate",
+						"name": "input",
+						"asserts": false,
+						"targetType": {
+							"type": "reference",
+							"target": 21,
+							"typeArguments": [
+								{
+									"type": "reference",
+									"target": 15,
+									"name": "DataT",
+									"package": "@veloss/openapi-ofetch",
+									"refersToTypeParameter": true
+								}
+							],
+							"name": "FetchError",
+							"package": "@veloss/openapi-ofetch"
+						}
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"children": [
+				21
+			]
+		},
+		{
+			"title": "Interfaces",
+			"children": [
+				98,
+				42,
+				78,
+				51
+			]
+		},
+		{
+			"title": "Type Aliases",
+			"children": [
+				66,
+				67,
+				63,
+				110,
+				104,
+				121,
+				130,
+				96,
+				94,
+				77
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				17,
+				1,
+				13
+			]
+		}
+	],
+	"packageName": "@veloss/openapi-ofetch",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "# @veloss/openapi-ofetch\n\nopenapi를 **ofetch** 스타일의 fetch 함수로 사용하기 위한 라이브러리입니다.\n\n## 🚀 Quick Start\n\nInstall:\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\n# npm\nnpm install @veloss/openapi-ofetch\n\n# yarn\nyarn add @veloss/openapi-ofetch\n\n# pnpm\npnpm add @veloss/openapi-ofetch\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\nImport:\n\n"
+		},
+		{
+			"kind": "code",
+			"text": "```ts\n// ESM / Typescript\nimport { createOpenApiFetch } from \"@veloss/openapi-ofetch\";\n\n// CJS\nconst { createOpenApiFetch } = require(\"@veloss/openapi-ofetch\");\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n## 📚 Documentation\n\n## License\n\n[MIT]("
+		},
+		{
+			"kind": "relative-link",
+			"text": "./LICENSE",
+			"target": 2
+		},
+		{
+			"kind": "text",
+			"text": ")"
+		}
+	],
+	"symbolIdMap": {
+		"0": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "createOpenApiFetch"
+		},
+		"2": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "createOpenApiFetch"
+		},
+		"3": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "Paths"
+		},
+		"4": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "Media"
+		},
+		"5": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "global"
+		},
+		"6": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "fetchClient"
+		},
+		"7": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "fetchClient"
+		},
+		"8": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "Method"
+		},
+		"9": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "Path"
+		},
+		"10": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "Init"
+		},
+		"11": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "request"
+		},
+		"12": {
+			"sourceFileName": "src/fetch.ts",
+			"qualifiedName": "options"
+		},
+		"13": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "isFetchError"
+		},
+		"14": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "isFetchError"
+		},
+		"15": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "DataT"
+		},
+		"16": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "input"
+		},
+		"17": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "createFetchError"
+		},
+		"18": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "createFetchError"
+		},
+		"19": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "DataT"
+		},
+		"20": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "input"
+		},
+		"21": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError"
+		},
+		"22": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.__fetch_error__"
+		},
+		"23": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.__base_error__"
+		},
+		"24": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.__constructor"
+		},
+		"25": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError"
+		},
+		"26": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.DataT"
+		},
+		"27": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "message"
+		},
+		"28": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "opts"
+		},
+		"29": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.name"
+		},
+		"30": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.statusCode"
+		},
+		"31": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.statusMessage"
+		},
+		"32": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.toJSON"
+		},
+		"33": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.toJSON"
+		},
+		"34": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.toData"
+		},
+		"35": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.toData"
+		},
+		"36": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.fatal"
+		},
+		"37": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.unhandled"
+		},
+		"38": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.data"
+		},
+		"39": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.cause"
+		},
+		"40": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.code"
+		},
+		"41": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchError.DataT"
+		},
+		"42": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchErrorConstructorOptions"
+		},
+		"43": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchErrorConstructorOptions.statusCode"
+		},
+		"44": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchErrorConstructorOptions.statusMessage"
+		},
+		"45": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseErrorConstructorOptions.cause"
+		},
+		"46": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseErrorConstructorOptions.code"
+		},
+		"47": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseErrorConstructorOptions.data"
+		},
+		"48": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseErrorConstructorOptions.fatal"
+		},
+		"49": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseErrorConstructorOptions.unhandled"
+		},
+		"50": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "FetchErrorConstructorOptions.DataT"
+		},
+		"51": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "IFetchError"
+		},
+		"52": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "IFetchError.toJSON"
+		},
+		"53": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "IFetchError.toJSON"
+		},
+		"54": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "IFetchError.toData"
+		},
+		"55": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "IFetchError.toData"
+		},
+		"56": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.name"
+		},
+		"57": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.fatal"
+		},
+		"58": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.unhandled"
+		},
+		"59": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.data"
+		},
+		"60": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.cause"
+		},
+		"61": {
+			"sourceFileName": "../error/dist/index.d.ts",
+			"qualifiedName": "BaseError.code"
+		},
+		"62": {
+			"sourceFileName": "src/error.ts",
+			"qualifiedName": "IFetchError.DataT"
+		},
+		"63": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "Fetch"
+		},
+		"64": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "Paths"
+		},
+		"65": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "Media"
+		},
+		"66": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "DefaultOpenApiPaths"
+		},
+		"67": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "ExpandedFetchOptions"
+		},
+		"68": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type"
+		},
+		"69": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type.retry"
+		},
+		"70": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type.retryDelay"
+		},
+		"71": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type"
+		},
+		"72": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type"
+		},
+		"73": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "retries"
+		},
+		"74": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type.retryStatusCodes"
+		},
+		"75": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type.timeout"
+		},
+		"76": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type.shouldThrowOnError"
+		},
+		"77": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "OtherFetchOptions"
+		},
+		"78": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "FetchOptions"
+		},
+		"79": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "FetchOptions.base"
+		},
+		"80": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "FetchOptions.AbortController"
+		},
+		"81": {
+			"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.dom.d.ts",
+			"qualifiedName": "__type"
+		},
+		"82": {
+			"sourceFileName": "../../node_modules/.pnpm/typescript@5.7.3/node_modules/typescript/lib/lib.dom.d.ts",
+			"qualifiedName": "__type"
+		},
+		"83": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "FetchOptions.middleware"
+		},
+		"84": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type.retry"
+		},
+		"85": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type.retryDelay"
+		},
+		"86": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type"
+		},
+		"87": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type"
+		},
+		"88": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "retries"
+		},
+		"89": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type.retryStatusCodes"
+		},
+		"90": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type.timeout"
+		},
+		"91": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "__type.shouldThrowOnError"
+		},
+		"92": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "FetchOptions.Paths"
+		},
+		"93": {
+			"sourceFileName": "src/global.types.ts",
+			"qualifiedName": "FetchOptions.Media"
+		},
+		"94": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "MaybePromise"
+		},
+		"95": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "T"
+		},
+		"96": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "MaybeArray"
+		},
+		"97": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "T"
+		},
+		"98": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "FetchClientRequestInit"
+		},
+		"99": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "FetchClientRequestInit.path"
+		},
+		"100": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "FetchClientRequestInit.method"
+		},
+		"101": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "FetchClientRequestInit.Paths"
+		},
+		"102": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "FetchClientRequestInit.Method"
+		},
+		"103": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "FetchClientRequestInit.Path"
+		},
+		"104": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "FetchClientOptions"
+		},
+		"105": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Paths"
+		},
+		"106": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Method"
+		},
+		"107": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Path"
+		},
+		"108": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Init"
+		},
+		"109": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Media"
+		},
+		"110": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "FetchClientContext"
+		},
+		"111": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type"
+		},
+		"112": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type.request"
+		},
+		"113": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type.options"
+		},
+		"114": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type.response"
+		},
+		"115": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type.error"
+		},
+		"116": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Paths"
+		},
+		"117": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Method"
+		},
+		"118": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Path"
+		},
+		"119": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Init"
+		},
+		"120": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Media"
+		},
+		"121": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "FetchMiddleware"
+		},
+		"122": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type"
+		},
+		"123": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type"
+		},
+		"124": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "context"
+		},
+		"125": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Paths"
+		},
+		"126": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Method"
+		},
+		"127": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Path"
+		},
+		"128": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Init"
+		},
+		"129": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Media"
+		},
+		"130": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "FetchMiddlewareFactory"
+		},
+		"131": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type"
+		},
+		"132": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type.onFetchRequest"
+		},
+		"133": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type.onFetchResponse"
+		},
+		"134": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "__type.onFetchError"
+		},
+		"135": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Paths"
+		},
+		"136": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Method"
+		},
+		"137": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Path"
+		},
+		"138": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Init"
+		},
+		"139": {
+			"sourceFileName": "src/fetch.types.ts",
+			"qualifiedName": "Media"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "src/index.ts",
+			"2": "LICENSE"
+		},
+		"reflections": {
+			"1": 0
+		}
+	}
+}
