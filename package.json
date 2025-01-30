@@ -1,7 +1,6 @@
 {
   "name": "veloss-monorepo",
   "version": "0.0.0",
-  "type": "module",
   "keywords": [
     "monorepo",
     "typescript",
@@ -28,7 +27,8 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck",
-    "version": "pnpm run build && changeset version && pnpm install"
+    "version": "pnpm run build && changeset version && pnpm install",
+    "gen:init": "turbo gen init"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",
