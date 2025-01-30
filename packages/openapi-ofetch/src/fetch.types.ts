@@ -3,8 +3,8 @@ import type { FetchOptions, DefaultOpenApiPaths } from "./global.types";
 import type { FetchResponse, MaybeOptionalInit } from "openapi-fetch";
 import type { FetchError } from "./error";
 
-type MaybePromise<T> = T | Promise<T>;
-type MaybeArray<T> = T | T[];
+export type MaybePromise<T> = T | Promise<T>;
+export type MaybeArray<T> = T | T[];
 
 export interface FetchClientRequestInit<
   Paths extends DefaultOpenApiPaths,
