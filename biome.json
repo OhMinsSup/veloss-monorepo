@@ -4,7 +4,12 @@
     "enabled": false
   },
   "files": {
-    "ignore": ["**/dist/**", "**/package.json", "**/docs/**"]
+    "ignore": [
+      "**/dist/**",
+      "**/package.json",
+      "**/docs/**",
+      "**/turbo/generators/template/**"
+    ]
   },
   "formatter": {
     "indentStyle": "space",

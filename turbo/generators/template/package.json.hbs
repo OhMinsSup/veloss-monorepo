@@ -1,0 +1,62 @@
+{
+  "name": "@veloss/{{ name }}",
+  "description": "",
+  "author": {
+    "name": "OhMinsSup",
+    "email": "mins5190@gmail.com"
+  },
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OhMinsSup/veloss-monorepo",
+    "directory": "packages/{{ name }}"
+  },
+  "bugs": {
+    "url": "https://github.com/OhMinsSup/veloss-monorepo/issues"
+  },
+  "keywords": [
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "git clean -xdf .cache .turbo dist node_modules docs",
+    "coverage": "vitest run --coverage",
+    "dev": "tsup --watch",
+    "format": "biome format . --write",
+    "lint": "biome check .",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "docs": "typedoc src/index.ts --out docs/v1 --excludePrivate --excludeProtected",
+    "docs:json": "typedoc --json docs/v1/spec.json --excludeExternals --excludePrivate --excludeProtected src/index.ts"
+  },
+  "devDependencies": {
+    "vite": "catalog:vitejs",
+    "vite-tsconfig-paths": "catalog:vitejs",
+    "jsdom": "catalog:vitejs",
+    "vitest": "catalog:vitejs",
+    "@veloss/tsconfig": "workspace:*",
+    "tsup": "catalog:",
+    "typedoc": "catalog:",
+    "typescript": "catalog:"
+  }
+}
