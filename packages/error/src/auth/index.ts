@@ -1,27 +1,43 @@
 import type { AuthErrorCode } from "./code";
-import { BaseError, type BaseErrorConstructorOptions } from "../base";
-import { omit } from "../core/utils";
+import { BaseError } from "../base";
+import { omit } from "../utils";
 
-export interface IAuthError<DataT = unknown> extends BaseError<DataT> {
+interface IAuthError<DataT = unknown> extends BaseError<DataT> {
+  /**
+   * The auth error code {@link AuthErrorCode}
+   */
   errorCode?: AuthErrorCode;
+  /**
+   * The http status code {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status}
+   */
   statusCode?: number;
-  fatal: boolean;
-  unhandled: boolean;
+  /**
+   * @override
+   * Convert the error to a JSON object
+   * @returns The JSON object representing the error
+   */
   toJSON(): Pick<AuthError<DataT>, "message" | "statusCode" | "errorCode" | "data">;
 }
 
-export interface AuthErrorConstructorOptions<DataT = unknown> extends BaseErrorConstructorOptions<DataT> {
-  errorCode?: AuthErrorCode;
-  statusCode?: number;
-}
+interface AuthErrorConstructorOptions<DataT = unknown> extends Omit<Partial<IAuthError<DataT>>, "name" | "toJSON"> {}
 
+/**
+ * @class AuthError
+ * Auth error class
+ * @template DataT - The type of the additional data
+ * @extends BaseError<DataT> - The base error class {@link BaseError<DataT>}
+ * @implements IAuthError<DataT> - The auth error interface {@link IAuthError<DataT>}
+ */
 export class AuthError<DataT = unknown> extends BaseError<DataT> implements IAuthError<DataT> {
   name = "AuthError";
+
   errorCode?: AuthErrorCode;
-  fatal = false;
-  unhandled = false;
+
   statusCode?: number;
 
+  /**
+   * Whether the error is an auth error
+   */
   static __auth_error__ = true;
 
   constructor(message: string, opts: AuthErrorConstructorOptions<DataT> = {}) {
@@ -57,6 +73,20 @@ export class AuthError<DataT = unknown> extends BaseError<DataT> implements IAut
   }
 }
 
+/**
+ * Create an auth error
+ * @param input - The input to create the auth error
+ * @returns The auth error
+ * @template DataT - The type of the data
+ *
+ * ```ts
+ * const error = createAuthError("AuthError");
+ * console.log(error instanceof AuthError); // true
+ * console.log(error instanceof BaseError); // true
+ * console.log(error instanceof Error); // true
+ * console.log(error.message); // "AuthError"
+ * ```
+ */
 export function createAuthError<DataT = unknown>(
   input:
     | string
@@ -122,6 +152,18 @@ export function createAuthError<DataT = unknown>(
   return err;
 }
 
+/**
+ * Check if the input is an auth error
+ * @param input - The input to check
+ * @returns True if the input is an auth error, false otherwise
+ * @template DataT - The type of the additional data
+ *
+ * ```ts
+ * const error = createAuthError("AuthError");
+ * console.log(isAuthError(error)); // true
+ * console.log(isAuthError(new Error("AuthError"))); // false
+ * ```
+ */
 export function isAuthError<DataT = unknown>(input: any): input is AuthError<DataT> {
   return input?.constructor?.__auth_error__ === true;
 }

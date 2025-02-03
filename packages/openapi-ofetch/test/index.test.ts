@@ -3,7 +3,7 @@ import { getQuery, joinURL } from "ufo";
 import { createApp, createError, eventHandler, readBody, readRawBody, toNodeListener } from "h3";
 import { describe, beforeEach, beforeAll, afterAll, it, expect, vi } from "vitest";
 import { createOpenApiFetch } from "../src";
-import { FetchError } from "../src/error";
+import { HttpError } from "@veloss/error";
 
 describe("openapi-ofetch", () => {
   let listener: Listener;
@@ -207,12 +207,12 @@ describe("openapi-ofetch", () => {
       base: listener.url,
     });
 
-    const error: Awaited<FetchError<any>> = await $fetch({
+    const error: Awaited<HttpError<any>> = await $fetch({
       method: "get",
       path: "/404",
     }).catch((_error) => _error);
 
-    expect(error).to.be.instanceOf(FetchError);
+    expect(error).to.be.instanceOf(HttpError);
 
     const { data, statusMessage, statusCode } = error.toJSON();
 
@@ -232,12 +232,12 @@ describe("openapi-ofetch", () => {
       base: listener.url,
     });
 
-    const error: Awaited<FetchError<any>> = await $fetch({
+    const error: Awaited<HttpError<any>> = await $fetch({
       method: "get",
       path: "/403",
     }).catch((_error) => _error);
 
-    expect(error).to.be.instanceOf(FetchError);
+    expect(error).to.be.instanceOf(HttpError);
 
     const { statusMessage, statusCode } = error.toJSON();
 
@@ -263,7 +263,7 @@ describe("openapi-ofetch", () => {
       base: listener.url,
     });
 
-    const error: Awaited<FetchError<any>> = await $fetch(
+    const error: Awaited<HttpError<any>> = await $fetch(
       {
         method: "get",
         path: "/404",
@@ -273,7 +273,7 @@ describe("openapi-ofetch", () => {
       },
     ).catch((_error) => _error);
 
-    expect(error).to.be.instanceOf(FetchError);
+    expect(error).to.be.instanceOf(HttpError);
 
     const { data } = error.toJSON();
 
@@ -348,12 +348,12 @@ describe("openapi-ofetch", () => {
     const $fetch = createOpenApiFetch({
       base: listener.url,
     });
-    const error: Awaited<FetchError<any>> = await $fetch({
+    const error: Awaited<HttpError<any>> = await $fetch({
       method: "post",
       path: "/403",
     }).catch((_error) => _error);
 
-    expect(error).to.be.instanceOf(FetchError);
+    expect(error).to.be.instanceOf(HttpError);
 
     const { data, statusMessage, statusCode } = error.toJSON();
 

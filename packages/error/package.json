@@ -5,7 +5,7 @@
     "name": "OhMinsSup",
     "email": "mins5190@gmail.com"
   },
-  "version": "0.0.3",
+  "version": "0.0.5",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -21,6 +21,16 @@
       "require": {
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
+      }
+    },
+    "./base": {
+      "import": {
+        "types": "./dist/base.d.ts",
+        "default": "./dist/base.js"
+      },
+      "require": {
+        "types": "./dist/base.d.cts",
+        "default": "./dist/base.cjs"
       }
     },
     "./http": {
@@ -72,8 +82,7 @@
     "lint": "biome check .",
     "test": "vitest run",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
-    "docs": "typedoc src/index.ts --out docs/v1 --excludePrivate --excludeProtected",
-    "docs:json": "typedoc --json docs/v1/spec.json --excludeExternals --excludePrivate --excludeProtected src/index.ts"
+    "docs": "typedoc src/index.ts --out docs"
   },
   "devDependencies": {
     "vite": "catalog:vitejs",
