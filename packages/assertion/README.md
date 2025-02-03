@@ -3,6 +3,7 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![bundle size][bundle-src]][bundle-href]
+[![MIT License][license-src]][license-src]
 
 데이터에 대한 타입을 검증하고 검증된 데이터를 안전한 타입으로 변환하는 라이브러리입니다.
 
@@ -566,3 +567,4 @@ console.log(isPrimitive({})); // false
 [npm-downloads-href]: https://npmjs.com/package/@veloss/assertion
 [bundle-src]: https://flat.badgen.net/bundlephobia/minzip/@veloss/assertion
 [bundle-href]: https://bundlephobia.com/package/@veloss/assertion
+[license-src]: https://img.shields.io/npm/l/@veloss/assertion?style=flat-square

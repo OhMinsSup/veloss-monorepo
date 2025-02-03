@@ -1,30 +1,60 @@
-import { omit } from "../core/utils";
+import { omit } from "../utils";
 
-export interface BaseErrorConstructorOptions<DataT = unknown> {
-  cause?: unknown;
-  code?: number;
-  data?: DataT;
-  fatal?: boolean;
-  unhandled?: boolean;
-}
-
-export interface IBaseError<DataT = unknown> extends Error {
+interface IBaseError<DataT = unknown> extends Error {
+  /**
+   * Whether the error is fatal
+   */
   fatal: boolean;
+  /**
+   * Whether the error is unhandled
+   */
   unhandled: boolean;
+  /**
+   * @template DataT - The type of the additional data
+   * Additional data
+   */
   data?: DataT;
+  /**
+   * The cause of the error
+   */
   cause?: unknown;
+  /**
+   * The error code
+   * @link https://developer.mozilla.org/en-US/docs/Web/API/DOMException
+   */
   code?: number;
+  /**
+   * Convert the error to a JSON object
+   * @returns The JSON object representing the error
+   */
   toJSON(): Pick<IBaseError<DataT>, "message" | "data">;
 }
 
+interface BaseErrorConstructorOptions<DataT = unknown> extends Omit<Partial<IBaseError<DataT>>, "name" | "toJSON"> {}
+
+/**
+ * @class BaseError
+ * Base error class
+ * @template DataT - The type of the additional data
+ * @extends Error - {@link Error}
+ * @implements IBaseError<DataT> - The base error interface {@link IBaseError<DataT>}
+ */
 export class BaseError<DataT = unknown> extends Error implements IBaseError<DataT> {
   name = "BaseError";
+
   fatal = false;
+
   unhandled = false;
+
   data?: DataT;
+
   cause?: unknown;
+
   code?: number;
 
+  /**
+   * Whether the error is a base error
+   */
   static __base_error__ = true;
 
   constructor(message: string, opts: BaseErrorConstructorOptions<DataT> = {}) {
@@ -64,6 +94,19 @@ export class BaseError<DataT = unknown> extends Error implements IBaseError<Data
   }
 }
 
+/**
+ * Create a base error
+ * @param input - The error message or the error object
+ * @returns The base error
+ * @template DataT - The type of the additional data
+ *
+ * ```ts
+ * const error = createBaseError("An error occurred");
+ * console.log(error instanceof BaseError); // true
+ * console.log(error instanceof Error); // true
+ * console.error(error.message); // An error occurred
+ * ```
+ */
 export function createBaseError<DataT = unknown>(input: string | Partial<BaseError<DataT>>) {
   if (typeof input === "string") {
     return new BaseError<DataT>(input);
@@ -112,6 +155,17 @@ export function createBaseError<DataT = unknown>(input: string | Partial<BaseErr
   return err;
 }
 
+/**
+ * Check if the input is a base error
+ * @param input - The input to check
+ * @returns True if the input is a base error, false otherwise
+ * @template DataT - The type of the additional data
+ *
+ * ```ts
+ * isBaseError(new Error()); // false
+ * isBaseError(createBaseError("An error occurred")); // true
+ * ```
+ */
 export function isBaseError<DataT = unknown>(input: any): input is BaseError<DataT> {
   return input?.constructor?.__base_error__ === true;
 }

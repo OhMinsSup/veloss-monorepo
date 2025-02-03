@@ -3,7 +3,8 @@ import { defineConfig } from "tsup";
 
 export default defineConfig((options: Options) => ({
   entry: {
-    index: "src/base/index.ts",
+    index: "src/index.ts",
+    base: "src/base/index.ts",
     auth: "src/auth/index.ts",
     http: "src/http/index.ts",
   },
