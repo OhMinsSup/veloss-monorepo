@@ -1,1 +1,1 @@
-export const name = "logger";
+export { Logger } from "./logger";

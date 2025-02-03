@@ -48,6 +48,9 @@
     "docs": "typedoc src/index.ts --out docs/v1 --excludePrivate --excludeProtected",
     "docs:json": "typedoc --json docs/v1/spec.json --excludeExternals --excludePrivate --excludeProtected src/index.ts"
   },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2"
+  },
   "devDependencies": {
     "vite": "catalog:vitejs",
     "vite-tsconfig-paths": "catalog:vitejs",
