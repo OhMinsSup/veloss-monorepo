@@ -57,7 +57,8 @@
     "format": "biome format . --write",
     "lint": "biome check .",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "docs": "typedoc src/index.ts --out docs"
   },
   "dependencies": {
     "@veloss/openapi-ofetch": "workspace:*",
