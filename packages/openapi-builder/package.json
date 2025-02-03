@@ -57,12 +57,11 @@
     "format": "biome format . --write",
     "lint": "biome check .",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
-    "docs": "typedoc src/index.ts --out docs/v1 --excludePrivate --excludeProtected",
-    "docs:json": "typedoc --json docs/v1/spec.json --excludeExternals --excludePrivate --excludeProtected src/index.ts"
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@veloss/openapi-ofetch": "workspace:*"
+    "@veloss/openapi-ofetch": "workspace:*",
+    "@veloss/error": "workspace:*"
   },
   "peerDependencies": {
     "openapi-fetch": "^0.13.4",

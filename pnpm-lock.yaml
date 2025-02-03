@@ -108,6 +108,9 @@ importers:
 
   packages/openapi-builder:
     dependencies:
+      '@veloss/error':
+        specifier: workspace:*
+        version: link:../error
       '@veloss/openapi-ofetch':
         specifier: workspace:*
         version: link:../openapi-ofetch
@@ -155,7 +158,7 @@ importers:
   packages/openapi-ofetch:
     dependencies:
       '@veloss/error':
-        specifier: ^0.0.3
+        specifier: workspace:*
         version: link:../error
       openapi-fetch:
         specifier: ^0.13.4

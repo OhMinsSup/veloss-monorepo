@@ -60,7 +60,7 @@
     "docs:json": "typedoc --json docs/v1/spec.json --excludeExternals --excludePrivate --excludeProtected src/index.ts"
   },
   "dependencies": {
-    "@veloss/error": "^0.0.3"
+    "@veloss/error": "workspace:*"
   },
   "peerDependencies": {
     "openapi-fetch": "^0.13.4",

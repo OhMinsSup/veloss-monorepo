@@ -3,7 +3,7 @@ import { getQuery, joinURL } from "ufo";
 import { createApp, createError, eventHandler, readBody, readRawBody, toNodeListener } from "h3";
 import { describe, beforeEach, beforeAll, afterAll, it, expect, vi } from "vitest";
 import { createOpenApiBuilder } from "../src";
-import { FetchError, isFetchError } from "@veloss/openapi-ofetch";
+import { HttpError, isHttpError } from "@veloss/error";
 
 describe("openapi-builder", () => {
   let listener: Listener;
@@ -178,17 +178,17 @@ describe("openapi-builder", () => {
       base: listener.url,
     });
 
-    let error: FetchError<any> | undefined;
+    let error: HttpError<any> | undefined;
 
     try {
       await client.method("get").path("/404").fetch();
     } catch (e) {
-      error = e as FetchError<any>;
+      error = e as HttpError<any>;
     }
 
-    expect(error).to.be.instanceOf(FetchError);
+    expect(error).to.be.instanceOf(HttpError);
 
-    if (error instanceof FetchError) {
+    if (error instanceof HttpError) {
       const { data, statusMessage, statusCode } = error.toJSON();
       expect(statusMessage).to.contain("Cannot find any path matching /404.");
       expect(statusCode).to.equal(404);
@@ -207,17 +207,17 @@ describe("openapi-builder", () => {
       base: listener.url,
     });
 
-    let error: FetchError<any> | undefined;
+    let error: HttpError<any> | undefined;
 
     try {
       await client.method("get").path("/403").fetch();
     } catch (e) {
-      error = e as FetchError<any>;
+      error = e as HttpError<any>;
     }
 
-    expect(error).to.be.instanceOf(FetchError);
+    expect(error).to.be.instanceOf(HttpError);
 
-    if (error instanceof FetchError) {
+    if (error instanceof HttpError) {
       const { statusMessage, statusCode } = error.toJSON();
       expect(statusMessage).to.contain("Forbidden");
       expect(statusCode).to.equal(403);
@@ -239,7 +239,7 @@ describe("openapi-builder", () => {
       base: listener.url,
     });
 
-    let error: FetchError<any> | undefined;
+    let error: HttpError<any> | undefined;
 
     try {
       await client
@@ -250,12 +250,12 @@ describe("openapi-builder", () => {
         })
         .fetch();
     } catch (e) {
-      error = e as FetchError<any>;
+      error = e as HttpError<any>;
     }
 
-    expect(error).to.be.instanceOf(FetchError);
+    expect(error).to.be.instanceOf(HttpError);
 
-    if (error instanceof FetchError) {
+    if (error instanceof HttpError) {
       const { data } = error.toJSON();
 
       expect(data?.response?.response.url).to.equal(getURL("404"));
@@ -347,17 +347,17 @@ describe("openapi-builder", () => {
       base: listener.url,
     });
 
-    let error: FetchError<any> | undefined;
+    let error: HttpError<any> | undefined;
 
     try {
       await client.method("post").path("/403").fetch();
     } catch (e) {
-      error = e as FetchError<any>;
+      error = e as HttpError<any>;
     }
 
-    expect(error).to.be.instanceOf(FetchError);
+    expect(error).to.be.instanceOf(HttpError);
 
-    if (error instanceof FetchError) {
+    if (error instanceof HttpError) {
       const { data, statusMessage, statusCode } = error.toJSON();
 
       expect(statusMessage).to.contain("Forbidden");
@@ -407,8 +407,8 @@ describe("openapi-builder", () => {
     try {
       await client.method("get").path("/timeout").setRetry({ retry: 0 }).setTimeout(100).fetch();
     } catch (e) {
-      if (isFetchError<any>(e)) {
-        const cause = e.cause as FetchError<any>;
+      if (isHttpError<any>(e)) {
+        const cause = e.cause as HttpError<any>;
         expect(cause.message).to.include("The operation was aborted due to timeout");
         expect(cause.name).to.equal("TimeoutError");
         expect(cause.code).to.equal(DOMException.TIMEOUT_ERR);
