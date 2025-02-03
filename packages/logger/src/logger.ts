@@ -266,14 +266,38 @@ export class Logger<T extends Record<string, unknown> = Record<string, unknown>>
    *
    * @param record - The log record to send. {@link LogRecord}
    *
+   * @throws {Error} - If an error occurs while sending the log record.
    */
   private emit(record: LogRecord): void {
     if (this.lowestLevel === null || compareLogLevel(record.level, this.lowestLevel) < 0) {
       return;
     }
 
+    const errors: Error[] = [];
+
     const transports = this.transport.toArray();
 
-    transports.filter((transport) => transport.enabled).map((transport) => transport.send(record));
+    const enabledTransports = transports.filter((transport) => transport.enabled);
+
+    for (const transport of enabledTransports) {
+      try {
+        transport.send(record);
+      } catch (error) {
+        if (error instanceof Error) {
+          errors.push(error);
+        }
+      }
+    }
+
+    if (errors.length > 0) {
+      for (const error of errors) {
+        console.error(error);
+      }
+
+      const error = errors.at(0);
+      if (errors) {
+        throw error;
+      }
+    }
   }
 }
