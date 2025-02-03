@@ -50,9 +50,7 @@
     "format": "biome format . --write",
     "lint": "biome check .",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
-    "docs": "typedoc src/index.ts --out docs/v1 --excludePrivate --excludeProtected",
-    "docs:json": "typedoc --json docs/v1/spec.json --excludeExternals --excludePrivate --excludeProtected src/index.ts"
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "devDependencies": {
     "vite": "catalog:vitejs",
@@ -61,7 +59,6 @@
     "vitest": "catalog:vitejs",
     "@veloss/tsconfig": "workspace:*",
     "tsup": "catalog:",
-    "typedoc": "catalog:",
     "typescript": "catalog:"
   }
 }
