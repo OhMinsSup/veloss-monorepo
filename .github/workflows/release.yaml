@@ -29,7 +29,10 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 9.7.0
-          run_install: true
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build all packages
         run: pnpm run build

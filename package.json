@@ -28,7 +28,8 @@
     "test": "turbo run test",
     "typecheck": "turbo run typecheck",
     "version": "pnpm run build && changeset version && pnpm install",
-    "gen:init": "turbo gen init"
+    "gen:init": "turbo gen init",
+    "docs": "turbo run docs"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",

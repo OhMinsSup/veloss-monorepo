@@ -1,7 +1,7 @@
 import type { HttpMethod, MediaType, PathsWithMethod } from "openapi-typescript-helpers";
-import type { FetchOptions, DefaultOpenApiPaths } from "./global.types";
+import type { FetchOptions, DefaultOpenApiPaths } from "./global";
 import type { FetchResponse, MaybeOptionalInit } from "openapi-fetch";
-import type { FetchError } from "./error";
+import type { HttpError } from "@veloss/error";
 
 export type MaybePromise<T> = T | Promise<T>;
 export type MaybeArray<T> = T | T[];
@@ -38,7 +38,7 @@ export type FetchClientContext<
   request: FetchClientRequestInit<Paths, Method, Path>;
   options?: FetchClientOptions<Paths, Method, Path, Init, Media>;
   response?: FetchResponse<Paths[Path][Method], Init, Media>;
-  error?: FetchError<FetchClientContext<Paths, Method, Path, Init, Media>>;
+  error?: HttpError<FetchClientContext<Paths, Method, Path, Init, Media>>;
 };
 
 export type FetchMiddleware<

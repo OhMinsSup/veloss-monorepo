@@ -1,16 +1,39 @@
 import { type FetchResponse, mergeHeaders, type MaybeOptionalInit } from "openapi-fetch";
 import type { HttpMethod, MediaType, PathsWithMethod } from "openapi-typescript-helpers";
 
-import { createFetchError, isFetchError } from "./error";
+import { createHttpError, isHttpError } from "@veloss/error";
 
-import type { DefaultOpenApiPaths, FetchOptions } from "./global.types";
-import type { FetchClientOptions, FetchClientRequestInit, FetchClientContext } from "./fetch.types";
+import type { DefaultOpenApiPaths, FetchOptions } from "./types/global";
+import type { FetchClientOptions, FetchClientRequestInit, FetchClientContext } from "./types/fetch";
 import { polyfillGlobalThis } from "./polyfills";
 import { createOpenApiClient, isPayloadMethod, omit, retryStatusCodes, selectedFetchMehtod, sleep, use } from "./utils";
 
 // 전역 객체에 대한 폴리필을 적용합니다.
 polyfillGlobalThis();
 
+/**
+ * create OpenApi Fetch Client Function
+ * @param global - Global Fetch Options
+ *
+ * ```ts
+ * const fetch = createOpenApiFetch({
+ *  base: "https://api.example.com",
+ * });
+ *
+ * const response = await fetch({
+ * method: "GET",
+ * path: "/v1/users",
+ * });
+ *
+ * if (response.error) {
+ * console.error(response.error);
+ * } else {
+ * console.log(response.data);
+ * }
+ * ```
+ *
+ * @returns Fetch Client Function
+ */
 export function createOpenApiFetch<Paths extends DefaultOpenApiPaths, Media extends MediaType = MediaType>(
   global: FetchOptions<Paths, Media> = {},
 ) {
@@ -128,7 +151,7 @@ export function createOpenApiFetch<Paths extends DefaultOpenApiPaths, Media exte
     if (!_options.signal && _options.timeout) {
       const controller = new AbortController();
       abortTimeout = setTimeout(() => {
-        const error = createFetchError({
+        const error = createHttpError({
           message: "[TimeoutError]: The operation was aborted due to timeout",
           name: "TimeoutError",
           code: 23, // DOMException.TIMEOUT_ERR
@@ -149,7 +172,7 @@ export function createOpenApiFetch<Paths extends DefaultOpenApiPaths, Media exte
       // @ts-expect-error "init" An issue where the type of init cannot be properly inferred.
       context.response = await fetchClient(context.request.path, init);
       if (context.response.error) {
-        throw createFetchError({
+        throw createHttpError({
           message: "[FetchError]: An error occurred",
           statusCode: context.response.response.status,
           statusMessage: context.response.response.statusText,
@@ -157,7 +180,7 @@ export function createOpenApiFetch<Paths extends DefaultOpenApiPaths, Media exte
         });
       }
     } catch (e) {
-      if (isFetchError<FetchClientContext<Paths, Method, Path, Init, Media>>(e)) {
+      if (isHttpError<FetchClientContext<Paths, Method, Path, Init, Media>>(e)) {
         context.error = e;
       }
 

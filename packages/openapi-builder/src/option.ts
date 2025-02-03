@@ -18,40 +18,9 @@ export class OpenApiOption<
   Init extends MaybeOptionalInit<Paths[Path], Method>,
   Media extends MediaType = MediaType,
 > {
-  /**
-   * @memberof OpenApiOption
-   * @instance
-   * @protected
-   * @property {ReturnType<typeof createOpenApiFetch<Paths, Media>>} client
-   * @description OpenAPI Fetch Client
-   */
   protected client: ReturnType<typeof createOpenApiFetch<Paths, Media>>;
-
-  /**
-   * @memberof OpenApiOption
-   * @instance
-   * @protected
-   * @property {Path} path
-   * @description API 요청을 보낼 때 사용할 path
-   */
   protected path: Path;
-
-  /**
-   * @memberof OpenApiOption
-   * @instance
-   * @protected
-   * @property {Method} method
-   * @description API 요청을 보낼 때 사용할 method
-   */
   protected method: Method;
-
-  /**
-   * @memberof OpenApiOption
-   * @instance
-   * @protected
-   * @property {FetchClientOptions<Paths, Method, Path, Init, Media>?} options
-   * @description API 요청을 보낼 때 사용할 options
-   */
   protected options?: FetchClientOptions<Paths, Method, Path, Init, Media>;
 
   constructor(options: OpenApiOptionOptions<Paths, Method, Path, Media>) {
@@ -61,9 +30,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청을 보낼 때 사용할 options를 설정합니다.
-   * @param {FetchClientOptions<Paths, Method, Path, Init, Media>} options
-   * @returns {this}
+   * openapi-fetch setting options
+   *
+   * @param options - openapi-fetch setting options {@link FetchClientOptions}
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setOptions({ ... });
+   * ```
    */
   setOptions(options: FetchClientOptions<Paths, Method, Path, Init, Media>): this {
     this.options = options;
@@ -71,9 +47,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description parseAs를 설정합니다.
-   * @param {ParseAs} parseAs
-   * @returns {this}
+   * openapi-fetch setting options is parseAs
+   *
+   * @param parseAs - parseAs type {@link ParseAs}
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setParseAs("json");
+   * ```
    */
   setParseAs(parseAs: ParseAs): this {
     this.options = {
@@ -84,9 +67,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청을 보낼 때 사용할 fetch를 설정합니다.
-   * @param {ClientOptions["fetch"]} fetch
-   * @returns {this}
+   * openapi-fetch setting options is fetch
+   *
+   * @param fetch - fetch API {@link ClientOptions["fetch"]}
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setFetch(fetch);
+   * ```
    */
   setFetch(fetch: ClientOptions["fetch"]): this {
     this.options = {
@@ -97,11 +87,17 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청을 보낼 때 사용할 headers를 설정합니다. 기존 headers가 있을 경우 덮어씁니다.
-   * 그리고 이 메소드는 인증토큰을 설정할 때 사용할 수 있습니다.
-   * @param {string} token
-   * @param {"Bearer" | "Basic"} type
-   * @returns {this}
+   * openapi-fetch setting options authorization token
+   *
+   * @param token - authorization token
+   * @param type - 'Bearer' or 'Basic'
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setAuthorization("token", "Bearer");
+   * ```
    */
   setAuthorization(token: string, type: "Bearer" | "Basic" = "Bearer"): this {
     const newHeaders = new Headers();
@@ -129,9 +125,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청을 보낼 때 사용할 headers를 설정합니다. 기존 headers가 있을 경우 덮어씁니다.
-   * @param {HeadersOptions} headers
-   * @returns {this}
+   * openapi-fetch setting options headers
+   *
+   * @param headers - headers options {@link HeadersOptions}
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setHeaders({ ... });
+   * ```
    */
   setHeaders(headers: HeadersOptions): this {
     if (headers instanceof Headers) {
@@ -163,9 +166,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청을 보낼 때 사용할 Params를 설정합니다.
-   * @param {*} params
-   * @returns {this}
+   * openapi-fetch setting options params
+   *
+   * @param params - params options
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setParams({ ... });
+   * ```
    */
   setParams(params: NonNullable<Init>["params"]): this {
     this.options = {
@@ -176,9 +186,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청을 보낼 때 사용할 body를 설정합니다.
-   * @param {*} body
-   * @returns {this}
+   * openapi-fetch setting options body
+   *
+   * @param body - body options
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("post").path("/users").setBody({ ... });
+   * ```
    */
   setBody(body: NonNullable<Init>["body"]): this {
     this.options = {
@@ -189,9 +206,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청을 보낼 때 사용할 BodySerializer를 설정합니다.
-   * @param {*} bodySerializer
-   * @returns {this}
+   * openapi-fetch setting options bodySerializer
+   *
+   * @param bodySerializer - bodySerializer options
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("post").path("/users").setBodySerializer({ ... });
+   * ```
    */
   setBodySerializer(bodySerializer: NonNullable<Init>["bodySerializer"]): this {
     this.options = {
@@ -202,9 +226,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청을 보낼 때 사용할 querySerializer를 설정합니다.
-   * @param {*} querySerializer
-   * @returns {this}
+   * openapi-fetch setting options querySerializer
+   *
+   * @param querySerializer - querySerializer options
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setQuerySerializer({ ... });
+   * ```
    */
   setQuerySerializer(querySerializer: NonNullable<Init>["querySerializer"]): this {
     this.options = {
@@ -215,9 +246,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청이 실패했을 때 재시도할 횟수를 설정합니다.
-   * @param {SetRetryOptions} parmas
-   * @returns {this}
+   * openapi-fetch setting options retry
+   *
+   * @param parmas - retry options {@link SetRetryOptions}
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setRetry({ ... });
+   * ```
    */
   setRetry(parmas: SetRetryOptions): this {
     this.options = {
@@ -230,9 +268,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청이 실패했을 때 타임아웃을 설정합니다.
-   * @param {number} timeout
-   * @returns {this}
+   * openapi-fetch setting options timeout
+   *
+   * @param timeout - timeout number
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setTimeout(1000);
+   * ```
    */
   setTimeout(timeout: number): this {
     this.options = {
@@ -243,9 +288,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청이 실패했을 때 에러를 던질지 여부를 설정합니다.
-   * @param {boolean} shouldThrowOnError
-   * @returns {this}
+   * openapi-fetch setting options shouldThrowOnError
+   *
+   * @param shouldThrowOnError - shouldThrowOnError boolean
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setShouldThrowOnError(true);
+   * ```
    */
   setShouldThrowOnError(shouldThrowOnError: boolean): this {
     this.options = {
@@ -256,9 +308,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청이 실패했을 때 사용할 signal을 설정합니다.
-   * @param {AbortSignal} signal
-   * @returns {this}
+   * openapi-fetch setting options signal
+   *
+   * @param signal - signal AbortSignal
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setSignal(signal);
+   * ```
    */
   setSignal(signal: AbortSignal): this {
     this.options = {
@@ -269,9 +328,16 @@ export class OpenApiOption<
   }
 
   /**
-   * @description API 요청에 대한 미들웨어를 설정합니다.
-   * @param {FetchMiddlewareFactory<Paths, Method, Path, Init, Media>} middleware
-   * @returns {this}
+   * openapi-fetch setting options middleware
+   *
+   * @param middleware - middleware FetchMiddlewareFactory {@link FetchMiddlewareFactory}
+   *
+   * @example
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").setMiddleware({ ... });
+   * ```
    */
   setMiddleware(middleware: FetchMiddlewareFactory<Paths, Method, Path, Init, Media>): this {
     this.options = {
@@ -282,8 +348,13 @@ export class OpenApiOption<
   }
 
   /**
-   * @description 해당 함수를 요청하면 PromiseLike 객체를 반환합니다.
-   * @returns {OpenApiBuilder<Paths, Method, Path, Init, Media>}
+   * openapi-fetch request fetch
+   *
+   * ```ts
+   * const client = new OpenApiClient();
+   *
+   * client.method("get").path("/users").fetch();
+   * ```
    */
   fetch(): OpenApiBuilder<Paths, Method, Path, Init, Media> {
     return new OpenApiBuilder<Paths, Method, Path, Init, Media>({

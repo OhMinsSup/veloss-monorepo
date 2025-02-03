@@ -2,13 +2,16 @@ type GlobalThis = typeof globalThis;
 
 declare global {
   interface Object {
+    /**
+     * `globalThis` polyfill for Node.js and browser.
+     */
     __magic_global_fetch__: GlobalThis;
   }
 }
 
 /**
- * @description globalThis를 polyfill합니다.
- * https://mathiasbynens.be/notes/globalthis
+ * `globalThis` polyfill for Node.js and browser.
+ *  {@link https://mathiasbynens.be/notes/globalthis}
  */
 export function polyfillGlobalThis() {
   if (typeof globalThis === "object") {
