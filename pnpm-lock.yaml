@@ -72,9 +72,6 @@ importers:
       tsup:
         specifier: 'catalog:'
         version: 8.3.5(jiti@2.4.2)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
-      typedoc:
-        specifier: 'catalog:'
-        version: 0.27.6(typescript@5.7.3)
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -96,9 +93,6 @@ importers:
       tsup:
         specifier: 'catalog:'
         version: 8.3.5(jiti@2.4.2)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
-      typedoc:
-        specifier: 'catalog:'
-        version: 0.27.6(typescript@5.7.3)
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -161,7 +155,7 @@ importers:
   packages/openapi-ofetch:
     dependencies:
       '@veloss/error':
-        specifier: workspace:*
+        specifier: ^0.0.3
         version: link:../error
       openapi-fetch:
         specifier: ^0.13.4
