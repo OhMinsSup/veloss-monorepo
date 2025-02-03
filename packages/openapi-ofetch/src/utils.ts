@@ -2,9 +2,13 @@ import type { ClientMethod, MaybeOptionalInit } from "openapi-fetch";
 import type { HttpMethod, MediaType, PathsWithMethod } from "openapi-typescript-helpers";
 import createClient from "openapi-fetch";
 
-import type { FetchOptions, DefaultOpenApiPaths, Fetch } from "./global.types";
-import type { FetchClientContext, FetchMiddleware } from "./fetch.types";
-// https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+import type { FetchOptions, DefaultOpenApiPaths, Fetch } from "./types/global";
+import type { FetchClientContext, FetchMiddleware } from "./types/fetch";
+
+/**
+ * Retry status codes
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+ */
 export const retryStatusCodes = new Set([
   408, // Request Timeout
   409, // Conflict
@@ -13,18 +17,45 @@ export const retryStatusCodes = new Set([
   500, // Internal Server Error
 ]);
 
+/**
+ * Network error status codes
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+ */
 export const networkErrorStatusCodes = new Set([
   502, // Bad Gateway
   503, // Service Unavailable
   504, // Gateway Timeout
 ]);
 
+/**
+ * Payload methods
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+ */
 const payloadMethods = new Set(Object.freeze(["PATCH", "POST", "PUT", "DELETE"]));
 
+/**
+ * Check if the method is a payload method.
+ * @param method - HTTP method
+ * @returns `true` if the method is a payload method
+ */
 export function isPayloadMethod(method = "GET") {
   return payloadMethods.has(method.toUpperCase());
 }
 
+/**
+ * Create an OpenAPI client.
+ * @param options - openapi-fetch options and other options {@link FetchOptions}
+ *
+ * ```ts
+ * const client = createOpenApiClient({ base: "https://api.example.com" });
+ *
+ * // or
+ *
+ * const client = createOpenApiClient({ base: createClient({ baseUrl: options.base, ...}) });
+ * ```
+ *
+ * @returns OpenAPI client {@link https://openapi-ts.dev/openapi-fetch/}
+ */
 export function createOpenApiClient<Paths extends DefaultOpenApiPaths, Media extends MediaType = MediaType>(
   options: Omit<FetchOptions<Paths, Media>, "AbortController"> = {},
 ) {
@@ -44,6 +75,19 @@ export function createOpenApiClient<Paths extends DefaultOpenApiPaths, Media ext
   return options.base;
 }
 
+/**
+ * Select the fetch method.
+ * @param fetch - OpenAPI fetch client
+ * @param mehtod - HTTP method
+ *
+ * ```ts
+ * const fetch = createOpenApiClient({ base: "https://api.example.com" });
+ * const method = selectedFetchMehtod(fetch, "GET");
+ * method('/path');
+ * ```
+ *
+ * @returns Fetch method {@link ClientMethod}
+ */
 export function selectedFetchMehtod<
   Paths extends DefaultOpenApiPaths,
   Method extends HttpMethod,
@@ -74,8 +118,30 @@ export function selectedFetchMehtod<
   }
 }
 
+/**
+ * Sleep for a while.
+ * @param ms - milliseconds
+ * @returns Promise
+ *
+ * ```ts
+ * await sleep(1000);
+ * ```
+ */
 export const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
+/**
+ * Pick the keys from the object
+ *
+ * @template T - The type of the object
+ * @param obj - The object to pick the keys from
+ * @param keys - The keys to pick
+ * @returns The object with the keys
+ *
+ * ```ts
+ * const obj = { a: 1, b: 2, c: 3 };
+ * pick(obj, ["a", "b"]); // { a: 1, b: 2 }
+ * ```
+ */
 export function pick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
   const newObj: any = {};
   for (const key of keys) {
@@ -84,6 +150,19 @@ export function pick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pi
   return newObj;
 }
 
+/**
+ * Omit the keys from the object
+ *
+ * @template T - The type of the object
+ * @param obj - The object to omit the keys from
+ * @param keys - The keys to omit
+ * @returns The object without the keys
+ *
+ * ```ts
+ * const obj = { a: 1, b: 2, c: 3 };
+ * omit(obj, ["a", "b"]); // { c: 3 }
+ * ```
+ */
 export function omit<T extends object, K extends keyof T>(obj: T, keys: K[]): Omit<T, K> {
   const newObj: any = {};
   for (const key in obj) {
@@ -94,6 +173,12 @@ export function omit<T extends object, K extends keyof T>(obj: T, keys: K[]): Om
   return newObj;
 }
 
+/**
+ * Fetch middleware.
+ * @param context - Fetch client context
+ * @param middlewares - Fetch middlewares
+ * @returns Promise
+ */
 export async function use<
   Paths extends DefaultOpenApiPaths,
   Method extends HttpMethod,
