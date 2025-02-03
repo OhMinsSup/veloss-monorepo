@@ -1,22 +1,42 @@
-import { BaseError, type BaseErrorConstructorOptions } from "../base";
-import { omit } from "../core/utils";
+import { BaseError } from "../base";
+import { omit } from "../utils";
 
-export interface IHttpError<DataT = unknown> extends BaseError<DataT> {
+interface IHttpError<DataT = unknown> extends BaseError<DataT> {
+  /**
+   * The http status code {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status}
+   */
   statusCode: number;
+  /**
+   * The http status message {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status}
+   */
   statusMessage?: string;
+  /**
+   * @override
+   * Convert the error to a JSON object
+   * @returns The JSON object representing the error
+   */
   toJSON(): Pick<IHttpError<DataT>, "message" | "statusCode" | "statusMessage" | "data">;
 }
 
-export interface HttpErrorConstructorOptions<DataT = unknown> extends BaseErrorConstructorOptions<DataT> {
-  statusCode?: number;
-  statusMessage?: string;
-}
+interface HttpErrorConstructorOptions<DataT = unknown> extends Omit<Partial<IHttpError<DataT>>, "name" | "toJSON"> {}
 
+/**
+ * @class HttpError
+ * Http error class
+ * @template DataT - The type of the additional data
+ * @extends BaseError<DataT> - The base error class {@link BaseError<DataT>}
+ * @implements IHttpError<DataT> - The http error interface {@link IHttpError<DataT>}
+ */
 export class HttpError<DataT = unknown> extends BaseError<DataT> implements IHttpError<DataT> {
   name = "HttpError";
+
   statusCode = 500;
+
   statusMessage?: string;
 
+  /**
+   * Whether the error is an http error
+   */
   static __http_error__ = true;
 
   constructor(message: string, opts: HttpErrorConstructorOptions<DataT> = {}) {
@@ -49,6 +69,18 @@ export class HttpError<DataT = unknown> extends BaseError<DataT> implements IHtt
   }
 }
 
+/**
+ * Create an http error
+ * @param input - The input to create the http error
+ * @returns The http error
+ * @template DataT - The type of the data
+ *
+ * ```ts
+ * const error = createHttpError("Http error");
+ * console.log(error instanceof HttpError); // true
+ * console.log(error.message); // "Http error"
+ * ```
+ */
 export function createHttpError<DataT = unknown>(
   input:
     | string
@@ -115,6 +147,18 @@ export function createHttpError<DataT = unknown>(
   return err;
 }
 
+/**
+ * Check whether the input is an http error
+ * @param input - The input to check
+ * @returns The input is an http error or not
+ * @template DataT - The type of the data
+ *
+ * ```ts
+ * const error = createHttpError("Http error");
+ * console.log(isHttpError(error)); // true
+ * console.log(isHttpError(new Error())); // false
+ * ```
+ */
 export function isHttpError<DataT = unknown>(input: any): input is HttpError<DataT> {
   return input?.constructor?.__http_error__ === true;
 }

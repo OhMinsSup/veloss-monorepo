@@ -11,40 +11,9 @@ export class OpenApiBuilder<
   Init extends MaybeOptionalInit<Paths[Path], Method>,
   Media extends MediaType = MediaType,
 > {
-  /**
-   * @memberof OpenApiBuilder
-   * @instance
-   * @protected
-   * @property {ReturnType<typeof createOpenApiFetch<Paths, Media>>} client
-   * @description OpenAPI Fetch Client
-   */
   protected client: ReturnType<typeof createOpenApiFetch<Paths, Media>>;
-
-  /**
-   * @memberof OpenApiBuilder
-   * @instance
-   * @protected
-   * @property {Path} path
-   * @description API 요청을 보낼 때 사용할 path
-   */
   protected path: Path;
-
-  /**
-   * @memberof OpenApiBuilder
-   * @instance
-   * @protected
-   * @property {Method} method
-   * @description API 요청을 보낼 때 사용할 method
-   */
   protected method: Method;
-
-  /**
-   * @memberof OpenApiBuilder
-   * @instance
-   * @protected
-   * @property {FetchClientOptions<Paths, Method, Path, Init, Media>?} options
-   * @description API 요청을 보낼 때 사용할 options
-   */
   protected options?: FetchClientOptions<Paths, Method, Path, Init, Media>;
 
   constructor(options: OpenApiBuilderOptions<Paths, Method, Path, Init, Media>) {

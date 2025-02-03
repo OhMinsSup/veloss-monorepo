@@ -1,8 +1,9 @@
 // @vitest-environment node
 
 import { expect, test } from "vitest";
-import { isBrowser } from "../src";
+import { isBrowser, isNode } from "../src";
 
-test("environment is server", () => {
+test("environment is node", () => {
   expect(isBrowser()).toBe(false);
+  expect(isNode()).toBe(true);
 });

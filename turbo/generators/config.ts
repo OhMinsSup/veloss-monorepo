@@ -54,6 +54,21 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       },
       {
         type: "add",
+        path: "packages/{{ name }}/README.md",
+        templateFile: "templates/README.md.hbs",
+      },
+      {
+        type: "add",
+        path: "packages/{{ name }}/LICENSE",
+        templateFile: "templates/LICENSE.hbs",
+      },
+      {
+        type: "add",
+        path: "packages/{{ name }}/.npmignore",
+        templateFile: "templates/.npmignore.hbs",
+      },
+      {
+        type: "add",
         path: "packages/{{ name }}/src/index.ts",
         template: "export const name = '{{ name }}';",
       },
