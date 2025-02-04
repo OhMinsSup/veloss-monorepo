@@ -4,6 +4,7 @@ import { defineConfig } from "tsup";
 export default defineConfig((options: Options) => ({
   entry: {
     index: "src/index.ts",
+    "transports/index": "src/transports/index.ts",
   },
   format: ["esm", "cjs"],
   dts: true,

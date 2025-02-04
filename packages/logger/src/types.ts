@@ -1,5 +1,4 @@
 import type { LogLevel } from "./level";
-import type { Logger } from "./logger";
 import type { LoggerTransport } from "./transport";
 
 export type LogTemplatePrefix = (message: TemplateStringsArray, ...values: unknown[]) => unknown[];

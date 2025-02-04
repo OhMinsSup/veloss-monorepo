@@ -1,4 +1,4 @@
-import { LoggerTransportManager } from "./transports.manager";
+import { LoggerTransportManager } from "./transport.manager";
 import type { LogCallback, LogRecord, LogSubscription, LoggerConfig, ILogger } from "./types";
 import { createContextManager, type ContextManager } from "./context";
 import { createLoggerId } from "./id";

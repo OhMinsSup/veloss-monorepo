@@ -22,6 +22,16 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
+    },
+    "./transports": {
+      "import": {
+        "types": "./dist/transports/index.d.ts",
+        "default": "./dist/transports/index.js"
+      },
+      "require": {
+        "types": "./dist/transports/index.d.cts",
+        "default": "./dist/transports/index.cjs"
+      }
     }
   },
   "repository": {
@@ -43,7 +53,6 @@
     "dev": "tsup --watch",
     "format": "biome format . --write",
     "lint": "biome check .",
-    "test": "vitest run",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "docs": "typedoc src/index.ts --out docs"
   },
