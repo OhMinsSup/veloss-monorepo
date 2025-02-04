@@ -1,6 +1,6 @@
 {
-  "name": "@veloss/{{ name }}",
-  "description": "",
+  "name": "@veloss/constants",
+  "description": "Constants for Veloss",
   "author": {
     "name": "OhMinsSup",
     "email": "mins5190@gmail.com"
@@ -27,13 +27,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/OhMinsSup/veloss-monorepo",
-    "directory": "packages/{{ name }}"
+    "directory": "packages/constants"
   },
   "bugs": {
     "url": "https://github.com/OhMinsSup/veloss-monorepo/issues"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "files": [
     "dist"
   ],
