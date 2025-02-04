@@ -1,7 +1,6 @@
 {
   "name": "veloss-monorepo",
   "version": "0.0.0",
-  "type": "module",
   "keywords": [
     "monorepo",
     "typescript",
@@ -29,6 +28,7 @@
     "test": "turbo run test",
     "typecheck": "turbo run typecheck",
     "version": "pnpm run build && changeset version && pnpm install",
+    "gen:init": "turbo gen init",
     "docs": "turbo run docs"
   },
   "devDependencies": {
