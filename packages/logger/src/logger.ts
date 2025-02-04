@@ -9,27 +9,39 @@ import { compareLogLevel, LogLevel } from "./level";
 const DEFAULT_LOGGER_PREFIX: string = "[Logger]";
 
 export class Logger<T extends Record<string, unknown> = Record<string, unknown>> implements ILogger<T> {
+  /**
+   * The prefix of the logger.
+   */
   private prefix: string;
 
-  readonly parent?: ILogger<T> | undefined;
-
+  /**
+   * Whether the logger is enabled.
+   */
   private enabled?: boolean | undefined;
 
+  /**
+   * The transport manager of the logger.
+   */
   private transport: LoggerTransportManager;
 
+  /**
+   * The print manager of the logger.
+   */
   private print: LoggerPrint;
 
+  /**
+   * The state change emitters of the logger.
+   */
   private stateChangeEmitters: Map<string, LogSubscription> = new Map<string, LogSubscription>();
 
   readonly category: readonly string[];
 
-  context: ContextManager<T>;
+  readonly context: ContextManager<T>;
 
   lowestLevel: LogLevel | null = LogLevel.debug;
 
   constructor(config?: LoggerConfig<T>) {
     this.enabled = config?.enabled ?? true;
-    this.parent = config?.parent;
     this.prefix = config?.prefix ?? DEFAULT_LOGGER_PREFIX;
     this.category = config?.category ?? [];
 
@@ -38,6 +50,29 @@ export class Logger<T extends Record<string, unknown> = Record<string, unknown>>
     this.print = new LoggerPrint();
 
     this.transport = new LoggerTransportManager({ transports: config?.transports });
+  }
+
+  /**
+   * Disables the logger.
+   */
+  enable(): void {
+    this.enabled = true;
+  }
+
+  /**
+   * Enables the logger.
+   */
+  disable(): void {
+    this.enabled = false;
+  }
+
+  /**
+   * Sets the prefix of the logger.
+   *
+   * @param prefix - The prefix to set.
+   */
+  setPrefix(prefix: string): void {
+    this.prefix = prefix;
   }
 
   private log(level: LogLevel, rawMessage: string, properties: T | (() => T)): void {
@@ -250,7 +285,6 @@ export class Logger<T extends Record<string, unknown> = Record<string, unknown>>
    *
    * @param event - The event to notify subscribers of {@link LogLevel}
    * @param record - The log record to notify subscribers of {@link LogRecord}
-   *
    */
   private notifyAllSubscribers(event: LogLevel, record: LogRecord) {
     // stateChangeEmitters에 등록된 Map의 값을 가져옵니다.
@@ -301,3 +335,7 @@ export class Logger<T extends Record<string, unknown> = Record<string, unknown>>
     }
   }
 }
+
+export const createLogger = <T extends Record<string, unknown> = Record<string, unknown>>(config?: LoggerConfig<T>) => {
+  return new Logger(config);
+};

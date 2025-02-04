@@ -5,6 +5,7 @@ import { createId } from "@paralleldrive/cuid2";
  *
  * @param id - The id to use.
  *
+ * @example
  * ```ts
  * const loggerId = createLoggerId(); // 'ckjv3v4e0000b3z5z5z5z5z5z'
  * ```

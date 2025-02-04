@@ -1,4 +1,5 @@
 import type { LogLevel } from "./level";
+import type { Logger } from "./logger";
 import type { LoggerTransport } from "./transport";
 
 export type LogTemplatePrefix = (message: TemplateStringsArray, ...values: unknown[]) => unknown[];
@@ -93,17 +94,11 @@ export interface LogSubscription {
   unsubscribe: () => void;
 }
 
-export interface ILogger<T> {
+export interface ILogger<T extends Record<string, unknown> = Record<string, unknown>> {
   /**
    * The category of the logger.  It is an array of strings.
    */
   readonly category: readonly string[];
-
-  /**
-   * The logger with the supercategory of the current logger.  If the current
-   * logger is the root logger, this is `null`.
-   */
-  readonly parent?: ILogger<T> | undefined;
 
   /**
    * Log a debug message.  Use this as a template string prefix.
@@ -383,12 +378,7 @@ export interface ILogger<T> {
   };
 }
 
-export type LoggerConfig<T> = {
-  /**
-   * The logger with the supercategory of the current logger.  If the current
-   * logger is the root logger, this is `undefined`.
-   */
-  parent?: ILogger<T>;
+export type LoggerConfig<T extends Record<string, unknown> = Record<string, unknown>> = {
   /**
    * The prefix of the log record.
    */

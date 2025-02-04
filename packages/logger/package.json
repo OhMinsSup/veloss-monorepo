@@ -1,6 +1,6 @@
 {
   "name": "@veloss/logger",
-  "description": "",
+  "description": "Simple logger library",
   "author": {
     "name": "OhMinsSup",
     "email": "mins5190@gmail.com"
@@ -45,8 +45,7 @@
     "lint": "biome check .",
     "test": "vitest run",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
-    "docs": "typedoc src/index.ts --out docs/v1 --excludePrivate --excludeProtected",
-    "docs:json": "typedoc --json docs/v1/spec.json --excludeExternals --excludePrivate --excludeProtected src/index.ts"
+    "docs": "typedoc src/index.ts --out docs"
   },
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2"

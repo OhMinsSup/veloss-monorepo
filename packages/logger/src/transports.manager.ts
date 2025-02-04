@@ -24,6 +24,7 @@ export class LoggerTransportManager<LoggerLibrary = any, Formatter = any> {
    *
    * @param transports - a list of transports or a single transport. If a single transport is provided, it will be converted to a list.
    *
+   * @example
    * ```ts
    * const manager = new LoggerTransportManager();
    * manager.init({ transports: [new ConsoleTransport()] });
@@ -55,6 +56,8 @@ export class LoggerTransportManager<LoggerLibrary = any, Formatter = any> {
 
   /**
    * Returns a list of transports.
+   *
+   * @example
    * ```ts
    * const manager = new LoggerTransportManager();
    * manager.init({ transports: [new ConsoleTransport()] });
@@ -72,6 +75,7 @@ export class LoggerTransportManager<LoggerLibrary = any, Formatter = any> {
    *
    * @param id - The transport id.
    *
+   * @example
    * ```ts
    * const manager = new LoggerTransportManager();
    * manager.init({ transports: [new ConsoleTransport()] });
@@ -87,6 +91,7 @@ export class LoggerTransportManager<LoggerLibrary = any, Formatter = any> {
    *
    * @param transports - a list of transports or a single transport. If a single transport is provided, it will be converted to a list.
    *
+   * @example
    * ```ts
    * const manager = new LoggerTransportManager();
    * manager.addTransport(new ConsoleTransport());
@@ -107,6 +112,7 @@ export class LoggerTransportManager<LoggerLibrary = any, Formatter = any> {
    *
    * @param id - The transport id.
    *
+   * @example
    * ```ts
    * const manager = new LoggerTransportManager();
    * manager.init({ transports: [new ConsoleTransport()] });
@@ -125,6 +131,7 @@ export class LoggerTransportManager<LoggerLibrary = any, Formatter = any> {
    *
    * @param id - The transport id.
    *
+   * @example
    * ```ts
    * const manager = new LoggerTransportManager();
    * manager.init({ transports: [new ConsoleTransport()] });
@@ -141,6 +148,7 @@ export class LoggerTransportManager<LoggerLibrary = any, Formatter = any> {
   /**
    * Enable all transports.
    *
+   * @example
    * ```ts
    * const manager = new LoggerTransportManager();
    * manager.init({ transports: [new ConsoleTransport()] });
@@ -156,6 +164,7 @@ export class LoggerTransportManager<LoggerLibrary = any, Formatter = any> {
   /**
    * Disable all transports.
    *
+   * @example
    * ```ts
    * const manager = new LoggerTransportManager();
    * manager.init({ transports: [new ConsoleTransport()] });
@@ -171,6 +180,7 @@ export class LoggerTransportManager<LoggerLibrary = any, Formatter = any> {
   /**
    * Release all transports.
    *
+   * @example
    * ```ts
    * const manager = new LoggerTransportManager();
    * manager.init({ transports: [new ConsoleTransport()] });

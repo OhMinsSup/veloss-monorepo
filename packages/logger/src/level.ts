@@ -35,9 +35,10 @@ export const logLevels: LogLevel[] = [LogLevel.debug, LogLevel.info, LogLevel.wa
 
 /**
  * compare log levels
- * @param a log level a
- * @param b log level b
+ * @param a log level a {@link LogLevel}
+ * @param b log level b {@link LogLevel}
  *
+ * @example
  * ```ts
  * compareLogLevel(LogLevel.debug, LogLevel.info); // -1
  * compareLogLevel(LogLevel.info, LogLevel.debug); // 1
@@ -62,8 +63,9 @@ export function compareLogLevel(a: LogLevel, b: LogLevel): number {
 
 /**
  * check if the level is a log level
- * @param level log level
+ * @param level log level {@link LogLevel}
  *
+ * @example
  * ```ts
  * isLogLevel(LogLevel.debug); // true
  * isLogLevel("info"); // false
@@ -81,5 +83,38 @@ export function isLogLevel(level: LogLevel): level is LogLevel {
       return true;
     default:
       return false;
+  }
+}
+
+/**
+ * get the short log level
+ *
+ * @param level log level {@link LogLevel}
+ *
+ * @example
+ * ```ts
+ * shortLogLevel(LogLevel.debug); // "DBG"
+ * shortLogLevel(LogLevel.info); // "INF"
+ * shortLogLevel(LogLevel.warn); // "WRN"
+ * shortLogLevel(LogLevel.error); // "ERR"
+ * shortLogLevel(LogLevel.fatal); // "FTL"
+ * ```
+ *
+ * @returns string
+ */
+export function shortLogLevel(level: LogLevel): string {
+  switch (level) {
+    case LogLevel.debug:
+      return "DBG";
+    case LogLevel.info:
+      return "INF";
+    case LogLevel.warn:
+      return "WRN";
+    case LogLevel.error:
+      return "ERR";
+    case LogLevel.fatal:
+      return "FTL";
+    default:
+      return level.toUpperCase();
   }
 }

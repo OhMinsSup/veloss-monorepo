@@ -1,6 +1,6 @@
 import type { LogRecord } from "../types";
 import { LoggerTransport } from "../transport";
-import { LogLevel } from "../level";
+import { LogLevel, shortLogLevel } from "../level";
 
 interface ConsoleTransportConstructor {
   id: string;
@@ -72,7 +72,7 @@ export class ConsoleTransport extends LoggerTransport<Console, unknown> {
       .padStart(3, "0")}`;
 
     return [
-      `%c${time} ${record.prefix} %c${record.level.toUpperCase()}%c %c${record.category.join("\xb7")} %c${msg}`,
+      `%c${time} ${record.prefix} %c${shortLogLevel(record.level)}%c %c${record.category.join("\xb7")} %c${msg}`,
       "color: gray;",
       this.logLevelStyles[record.level],
       "background-color: default;",
