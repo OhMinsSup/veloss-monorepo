@@ -1,11 +1,11 @@
 {
-  "name": "@veloss/{{ name }}",
-  "description": "",
+  "name": "@veloss/constants",
+  "description": "Constants for Veloss",
   "author": {
     "name": "OhMinsSup",
     "email": "mins5190@gmail.com"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -22,17 +22,38 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
+    },
+    "./http": {
+      "import": {
+        "types": "./dist/http.d.ts",
+        "default": "./dist/http.js"
+      },
+      "require": {
+        "types": "./dist/http.d.cts",
+        "default": "./dist/http.cjs"
+      }
+    },
+    "./auth": {
+      "import": {
+        "types": "./dist/auth.d.ts",
+        "default": "./dist/auth.js"
+      },
+      "require": {
+        "types": "./dist/auth.d.cts",
+        "default": "./dist/auth.cjs"
+      }
     }
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/OhMinsSup/veloss-monorepo",
-    "directory": "packages/{{ name }}"
+    "directory": "packages/constants"
   },
   "bugs": {
     "url": "https://github.com/OhMinsSup/veloss-monorepo/issues"
   },
   "keywords": [
+    "constants"
   ],
   "files": [
     "dist"
@@ -40,11 +61,9 @@
   "scripts": {
     "build": "tsup",
     "clean": "git clean -xdf .cache .turbo dist node_modules docs",
-    "coverage": "vitest run --coverage",
     "dev": "tsup --watch",
     "format": "biome format . --write",
     "lint": "biome check .",
-    "test": "vitest run",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "docs": "typedoc src/index.ts --out docs"
   },
