@@ -57,9 +57,6 @@ importers:
       turbo:
         specifier: ^2.3.4
         version: 2.3.4
-      typedoc:
-        specifier: 'catalog:'
-        version: 0.27.6(typescript@5.7.3)
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -75,6 +72,36 @@ importers:
       tsup:
         specifier: 'catalog:'
         version: 8.3.5(jiti@2.4.2)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
+      typedoc:
+        specifier: 'catalog:'
+        version: 0.27.6(typescript@5.7.3)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.7.3
+      vite:
+        specifier: catalog:vitejs
+        version: 6.0.11(@types/node@22.10.9)(jiti@2.4.2)(lightningcss@1.29.1)(sass-embedded@1.83.4)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0)
+      vite-tsconfig-paths:
+        specifier: catalog:vitejs
+        version: 5.1.4(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.9)(jiti@2.4.2)(lightningcss@1.29.1)(sass-embedded@1.83.4)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))
+      vitest:
+        specifier: catalog:vitejs
+        version: 3.0.4(@types/debug@4.1.12)(@types/node@22.10.9)(jiti@2.4.2)(jsdom@26.0.0)(lightningcss@1.29.1)(sass-embedded@1.83.4)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0)
+
+  packages/constants:
+    devDependencies:
+      '@veloss/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      jsdom:
+        specifier: catalog:vitejs
+        version: 26.0.0
+      tsup:
+        specifier: 'catalog:'
+        version: 8.3.5(jiti@2.4.2)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
+      typedoc:
+        specifier: 'catalog:'
+        version: 0.27.6(typescript@5.7.3)
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -96,6 +123,9 @@ importers:
       tsup:
         specifier: 'catalog:'
         version: 8.3.5(jiti@2.4.2)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
+      typedoc:
+        specifier: 'catalog:'
+        version: 0.27.6(typescript@5.7.3)
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -253,6 +283,9 @@ importers:
       tsup:
         specifier: 'catalog:'
         version: 8.3.5(jiti@2.4.2)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
+      typedoc:
+        specifier: 'catalog:'
+        version: 0.27.6(typescript@5.7.3)
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
