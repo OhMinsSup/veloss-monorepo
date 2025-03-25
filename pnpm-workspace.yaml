@@ -12,7 +12,7 @@ catalog:
 
 catalogs:
   vitejs:
-    vite: ^6.0.11
+    vite: ^5.4.15
     vite-tsconfig-paths: ^5.1.4
     vitest: ^3.0.5
     jsdom: ^26.0.0
